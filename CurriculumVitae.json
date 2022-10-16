@@ -1,0 +1,194 @@
+{
+    "basics": {
+        "name": "Callum M Walley",
+        "label": "Engineer",
+        "image": "",
+        "email": "callumnmw@gmail.com",
+        "phone": "02102703104",
+        "url": "",
+        "summary": "",
+        "location": {
+            // "address": "2712 Broadway St",
+            // "postalCode": "CA 94115",
+            "city": "Auckland",
+            "countryCode": "NZ",
+            // "region": "California"
+        },
+        "profiles": [
+            // {
+            //     "network": "Twitter",
+            //     "username": "john",
+            //     "url": "https://twitter.com/john"
+            // }
+            {
+                "network": "GitHub",
+                "username": "CallumWalley",
+                "url": "https://github.com/CallumWalley"
+            },
+            {
+                "network": "LinkedIn",
+                "username": "callum-macdonald-walley-227339142",
+                "url": "https://www.linkedin.com/in/callum-macdonald-walley-227339142/"
+            },
+            // {
+            //     "network": "tycho",
+            //     "username": "CallumWalley",
+            //     "url": "https://github.com/CallumWalley"
+            // },
+        ]
+    },
+    "work": [
+        {
+            "name": "NeSI",
+            "nameLong": "New Zealand eScience Infrastructure",
+            "position": "Applications Support Specialist",
+            "url": "https://support.nesi.org.nz/hc/en-gb",
+            "startDate": "2018",
+            "endDate": "Present",
+            "summary": "Support...",
+            "highlights": [
+                "Training"
+            ]
+        },
+        {
+            "name": "Tycho",
+            "position": "President",
+            "url": "https://company.com",
+            "startDate": "2018",
+            "endDate": "Present",
+            "summary": "Description…",
+            "highlights": [
+                "Started the company"
+            ]
+        },
+        {
+            "name": "AUT",
+            "position": "Research Assistant",
+            "url": "",
+            "startDate": "2016",
+            "endDate": "2017",
+            "summary": "Description…",
+            "highlights": [
+                "UAV Controller design",
+                "Instrumentation"
+            ]
+        }
+        {
+            "name": "White Star ",
+            "position": "Trainee Engineer",
+            "url": "https://swageturn.com/",
+            "startDate": "2017",
+            "endDate": "2018",
+            "summary": "",
+            "highlights": [
+                "Made the website"
+            ]
+        }
+    ],
+    "volunteer": [
+        {
+            "organization": "ARHT",
+            "organizationLong": "Auckland Rescue Helicopter Trust",
+            "position": "Simulator Instructor",
+            "url": "",
+            "startDate": "2013",
+            "endDate": "2021",
+            "summary": "",
+            "highlights": [
+                "Represented Volanteers at 2014 Royal Reception (Met Harry)."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "AUT University",
+            "institutionLong": "Auckland University of Technology University",
+            "url": "",
+            "area": "Mechanical Engineering",
+            "studyType": "Honors",
+            "startDate": "2013",
+            "endDate": "2017",
+            // "score": "4.0",
+            // "courses": [
+            //     "DB1101 - Basic SQL"
+            // ]
+        }
+    ],
+    // "awards": [
+    //     {
+    //         "title": "Award",
+    //         "date": "2014-11-01",
+    //         "awarder": "Company",
+    //         "summary": "There is no spoon."
+    //     }
+    // ],
+    // "certificates": [
+    //     {
+    //         "name": "Certificate",
+    //         "date": "2021-11-07",
+    //         "issuer": "Company",
+    //         "url": "https://certificate.com"
+    //     }
+    // ],
+    // "publications": [
+    //     {
+    //         "name": "Publication",
+    //         "publisher": "Company",
+    //         "releaseDate": "2014-10-01",
+    //         "url": "https://publication.com",
+    //         "summary": "Description…"
+    //     }
+    // ],
+    // "skills": [
+    //     {
+    //         "name": "Web Development",
+    //         "level": "Master",
+    //         "keywords": [
+    //             "HTML",
+    //             "CSS",
+    //             "JavaScript"
+    //         ]
+    //     }
+    // ],
+    // "languages": [
+    //     {
+    //         "language": "English",
+    //         "fluency": "Native speaker"
+    //     }
+    // ],
+    // "interests": [
+    //     {
+    //         "name": "Wildlife",
+    //         "keywords": [
+    //             "Ferrets",
+    //             "Unicorns"
+    //         ]
+    //     }
+    // ],
+    // "references": [
+    //     {
+    //         "name": "Jane Doe",
+    //         "reference": "Reference…"
+    //     }
+    // ],
+    // "projects": [
+    //     {
+    //         "name": "Project",
+    //         "description": "Description…",
+    //         "highlights": [
+    //             "Won award at AIHacks 2016"
+    //         ],
+    //         "keywords": [
+    //             "HTML"
+    //         ],
+    //         "startDate": "2019-01-01",
+    //         "endDate": "2021-01-01",
+    //         "url": "https://project.com/",
+    //         "roles": [
+    //             "Team Lead"
+    //         ],
+    //         "entity": "Entity",
+    //         "type": "application"
+    //     }
+    // ]
+}
