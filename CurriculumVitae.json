@@ -8,18 +8,15 @@
         "url": "",
         "summary": "",
         "location": {
-            // "address": "2712 Broadway St",
-            // "postalCode": "CA 94115",
             "city": "Auckland",
-            "countryCode": "NZ",
-            // "region": "California"
+            "countryCode": "NZ"
         },
         "profiles": [
-            // {
-            //     "network": "Twitter",
-            //     "username": "john",
-            //     "url": "https://twitter.com/john"
-            // }
+            {
+                "network": "Twitter",
+                "username": "john",
+                "url": "https://twitter.com/john"
+            },
             {
                 "network": "GitHub",
                 "username": "CallumWalley",
@@ -30,11 +27,11 @@
                 "username": "callum-macdonald-walley-227339142",
                 "url": "https://www.linkedin.com/in/callum-macdonald-walley-227339142/"
             },
-            // {
-            //     "network": "tycho",
-            //     "username": "CallumWalley",
-            //     "url": "https://github.com/CallumWalley"
-            // },
+            {
+                "network": "tycho",
+                "username": "CallumWalley",
+                "url": "https://github.com/CallumWalley"
+            }
         ]
     },
     "work": [
@@ -72,7 +69,7 @@
                 "UAV Controller design",
                 "Instrumentation"
             ]
-        }
+        },
         {
             "name": "White Star ",
             "position": "Trainee Engineer",
@@ -107,88 +104,84 @@
             "area": "Mechanical Engineering",
             "studyType": "Honors",
             "startDate": "2013",
-            "endDate": "2017",
-            // "score": "4.0",
-            // "courses": [
-            //     "DB1101 - Basic SQL"
-            // ]
+            "endDate": "2017"
         }
     ],
-    // "awards": [
-    //     {
-    //         "title": "Award",
-    //         "date": "2014-11-01",
-    //         "awarder": "Company",
-    //         "summary": "There is no spoon."
-    //     }
-    // ],
-    // "certificates": [
-    //     {
-    //         "name": "Certificate",
-    //         "date": "2021-11-07",
-    //         "issuer": "Company",
-    //         "url": "https://certificate.com"
-    //     }
-    // ],
-    // "publications": [
-    //     {
-    //         "name": "Publication",
-    //         "publisher": "Company",
-    //         "releaseDate": "2014-10-01",
-    //         "url": "https://publication.com",
-    //         "summary": "Description…"
-    //     }
-    // ],
-    // "skills": [
-    //     {
-    //         "name": "Web Development",
-    //         "level": "Master",
-    //         "keywords": [
-    //             "HTML",
-    //             "CSS",
-    //             "JavaScript"
-    //         ]
-    //     }
-    // ],
-    // "languages": [
-    //     {
-    //         "language": "English",
-    //         "fluency": "Native speaker"
-    //     }
-    // ],
-    // "interests": [
-    //     {
-    //         "name": "Wildlife",
-    //         "keywords": [
-    //             "Ferrets",
-    //             "Unicorns"
-    //         ]
-    //     }
-    // ],
-    // "references": [
-    //     {
-    //         "name": "Jane Doe",
-    //         "reference": "Reference…"
-    //     }
-    // ],
-    // "projects": [
-    //     {
-    //         "name": "Project",
-    //         "description": "Description…",
-    //         "highlights": [
-    //             "Won award at AIHacks 2016"
-    //         ],
-    //         "keywords": [
-    //             "HTML"
-    //         ],
-    //         "startDate": "2019-01-01",
-    //         "endDate": "2021-01-01",
-    //         "url": "https://project.com/",
-    //         "roles": [
-    //             "Team Lead"
-    //         ],
-    //         "entity": "Entity",
-    //         "type": "application"
-    //     }
-    // ]
+    "awards": [
+        {
+            "title": "Award",
+            "date": "2014-11-01",
+            "awarder": "Company",
+            "summary": "There is no spoon."
+        }
+    ],
+    "certificates": [
+        {
+            "name": "Certificate",
+            "date": "2021-11-07",
+            "issuer": "Company",
+            "url": "https://certificate.com"
+        }
+    ],
+    "publications": [
+        {
+            "name": "Publication",
+            "publisher": "Company",
+            "releaseDate": "2014-10-01",
+            "url": "https://publication.com",
+            "summary": "Description…"
+        }
+    ],
+    "skills": [
+        {
+            "name": "Web Development",
+            "level": "Master",
+            "keywords": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "language": "English",
+            "fluency": "Native speaker"
+        }
+    ],
+    "interests": [
+        {
+            "name": "Wildlife",
+            "keywords": [
+                "Ferrets",
+                "Unicorns"
+            ]
+        }
+    ],
+    "references": [
+        {
+            "name": "Jane Doe",
+            "reference": "Reference…"
+        }
+    ],
+    "projects": [
+        {
+            "name": "Project",
+            "description": "Description…",
+            "highlights": [
+                "Won award at AIHacks 2016"
+            ],
+            "keywords": [
+                "HTML"
+            ],
+            "startDate": "2019-01-01",
+            "endDate": "2021-01-01",
+            "url": "https://project.com/",
+            "roles": [
+                "Team Lead"
+            ],
+            "entity": "Entity",
+            "type": "application"
+        }
+    ]
 }
