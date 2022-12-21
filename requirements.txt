@@ -1,2 +1,2 @@
 css-html-js-minify
-pdf-kit
+pdfkit
