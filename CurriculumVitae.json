@@ -241,16 +241,25 @@
             ]
         },
         {
+            "name": "Data Science",
+            "description": "",
+            "highlights": [
+                ""
+            ],
+            "keywords": [
+                "GitLab/GitHub",
+                "CI/CD",
+                "Automation"
+            ]
+        },
+        {
             "name": "High Performance Computing",
             "description": "",
             "highlights": [
                 "Bash",
                 "Scheduler (SLURM)"
             ],
-            "keywords": [
-                "Solidworks",
-                "CadQuery"
-            ]
+            "keywords": []
         },
         {
             "name": "Digital Design",
@@ -360,7 +369,7 @@
             "reference": "NeSI Manager",
             "contact": {
                 "email": "blair.bethwaite@nesi.org.nz",
-                "blood-sacrifice": "goat"
+                "blood-sacrifice": "not a real contact method"
             }
         }
     ],
