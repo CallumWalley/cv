@@ -17,7 +17,6 @@ import pdfkit
 
 # with open(f"generated/html/{output_name}.html", "w") as f:
 #     f.write(parsed)
-]from css_html_js_minify import css_minify
 
 STYLE_SHEETS = "../style"
 TEMPLATE_PATH = "../templates"
