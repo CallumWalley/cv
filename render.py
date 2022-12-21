@@ -4,6 +4,7 @@ import glob
 import json
 import re
 import datetime
+import pdfkit
 
 # now = datetime.datetime.now()
 # output_name = "test"
@@ -16,7 +17,11 @@ import datetime
 
 # with open(f"generated/html/{output_name}.html", "w") as f:
 #     f.write(parsed)
+from flask import current_app as app
+from flask import render_template
+from css_html_js_minify import css_minify
 
+STYLE_SHEETS = "../style"
 TEMPLATE_PATH = "../templates"
 
 # def load_data(json_glob):
@@ -69,7 +74,7 @@ TEMPLATE_PATH = "../templates"
 #     return dict((k, v) for d in datas for (k, v) in d.items())
 
 
-def compile_template(template_path, data, output_path):
+def compile_template(template_path, data):
     template_path = os.path.abspath(template_path)
 
     env = jinja2.environment.Environment(
@@ -78,16 +83,30 @@ def compile_template(template_path, data, output_path):
 
     template = env.get_template(os.path.basename(template_path))
 
-    with open(output_path, "w") as f:
-        f.write(template.render(**data))
+    return template.render(**data)
+
+
+def html2pdf(html_path, pdf_path):
+    options = {
+        "page-size": "Letter",
+        "margin-top": "0.35in",
+        "margin-right": "0.75in",
+        "margin-bottom": "0.75in",
+        "margin-left": "0.75in",
+        "encoding": "UTF-8",
+        "enable-local-file-access": True,
+        "user-style-sheet": "formatting/base.css",
+    }
+    with open(html_path) as f:
+        pdfkit.from_file(f, pdf_path, options=options, verbose=True)
 
 
 if __name__ == "__main__":
     template_file = "templates/base.html.jinja"
     filename = os.path.splitext(os.path.split(template_file)[1])[0]
 
-    compile_template(
-        template_file,
-        json.load(open("CurriculumVitae.json")),
-        "generated/html/test.html",
-    )
+    compiled = compile_template(template_file, json.load(open("CurriculumVitae.json")))
+    with open("generated/html/test.html", "w+") as f:
+        f.write(compiled)
+
+    html2pdf("generated/html/test.html", "generated/pdf/test.pdf")
