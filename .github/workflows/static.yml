@@ -28,6 +28,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: apt get
+        run: apt-get install -y wkhtmltopdf
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install dependencies
