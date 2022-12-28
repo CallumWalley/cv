@@ -5,21 +5,110 @@ import json
 import re
 import datetime
 import pdfkit
+import yaml
+from slugify import slugify
+from pathlib import Path
 
-# now = datetime.datetime.now()
-# output_name = "test"
-
-# env = jinja2.Environment(loader=jinja2.FileSystemLoader("templates"))
-# template = env.get_template("base.html")
-# parsed = template.render()
-# print(parsed)
+CV_FILE = "CurriculumVitae.json"
+VIBES_FILE = "vibes.yaml"
+TEMPLATES = "templates"
 
 
-# with open(f"generated/html/{output_name}.html", "w") as f:
-#     f.write(parsed)
+def return_filtered(obj, filter_value):
+    def get_slug(d):
+        if isinstance(d, tuple):
+            return d[0]
+        # Order in which to use key as slug.
+        key_order = ["name", "organization", "institution", "title", "language"]
+        if "slug" in d:
+            return d["slug"]
+        else:
+            for key in key_order:
+                if key in d:
+                    return slugify(d[key])
+            else:
+                return slugify(str(d))
 
-STYLE_SHEETS = "../style"
-TEMPLATE_PATH = "../templates"
+    if isinstance(filter_value, bool):
+        # If true, return all unmodified.
+        return obj if filter_value else []
+    elif isinstance(filter_value, (tuple, list, set)):
+        return (
+            dict(filter(lambda x: (get_slug(x) in filter_value), obj.items()))
+            if isinstance(obj, dict)  # Unpack if dict
+            else list(filter(lambda x: (get_slug(x) in filter_value), obj))
+        )
+    else:
+        return {
+            key: return_filtered(obj[key], value) if key in obj else []
+            for key, value in filter_value.items()
+        }
+
+
+def load_json_yaml(path):
+    with open(path, "r") as f:
+        suffix = Path(path).suffix
+        if suffix in [".json"]:
+            return json.load(f)
+        elif suffix in [".yaml", ".yml"]:
+            return yaml.load(f, Loader=yaml.SafeLoader)
+        else:
+            raise Exception(f"'{path}' doesn't look like yaml or json.")
+
+
+def generate_vibe(vibe, cv):
+
+    # Filter CV data.
+    cv = return_filtered(cv, vibe["filter"])
+    print(cv)
+    # always generate html.
+    template_path = os.path.abspath(vibe["template"])
+
+    jinja_env = jinja2.environment.Environment(
+        loader=jinja2.FileSystemLoader(Path(template_path).parent)
+    )
+
+    template = jinja_env.get_template(Path(template_path).name)
+
+    html = template.render(**cv)
+
+    for output in vibe["output"]:
+        file_type = Path(output).suffix
+        Path(output).parent.mkdir(parents=True, exist_ok=True)
+        if file_type == ".html":
+            with open(output, "w+") as f:
+                f.write(html)
+            print(f"Created {output}")
+        elif file_type == ".pdf":
+            html2pdf(html, output)
+            print(f"Created {output}")
+        else:
+            print(f"File type {file_type} no instructions to make.")
+    return
+
+
+def html2pdf(html, pdf_path):
+    options = {
+        "page-size": "Letter",
+        "margin-top": "0.35in",
+        "margin-right": "0.75in",
+        "margin-bottom": "0.75in",
+        "margin-left": "0.75in",
+        "encoding": "UTF-8",
+        "enable-local-file-access": True,
+        "user-style-sheet": "formatting/base.css",
+    }
+    pdfkit.from_string(html, pdf_path, options=options, verbose=True)
+
+
+if __name__ == "__main__":
+
+    cv = load_json_yaml(CV_FILE)
+    vibes = load_json_yaml(VIBES_FILE)
+
+    for vibe in vibes:
+        generate_vibe(vibe, cv)
+
 
 # def load_data(json_glob):
 #     def _ordinal_day(e):
@@ -69,41 +158,3 @@ TEMPLATE_PATH = "../templates"
 #             datas.append(data)
 
 #     return dict((k, v) for d in datas for (k, v) in d.items())
-
-
-def compile_template(template_path, data):
-    template_path = os.path.abspath(template_path)
-
-    env = jinja2.environment.Environment(
-        loader=jinja2.FileSystemLoader(os.path.dirname(template_path))
-    )
-
-    template = env.get_template(os.path.basename(template_path))
-
-    return template.render(**data)
-
-
-def html2pdf(html_path, pdf_path):
-    options = {
-        "page-size": "Letter",
-        "margin-top": "0.35in",
-        "margin-right": "0.75in",
-        "margin-bottom": "0.75in",
-        "margin-left": "0.75in",
-        "encoding": "UTF-8",
-        "enable-local-file-access": True,
-        "user-style-sheet": "formatting/base.css",
-    }
-    with open(html_path) as f:
-        pdfkit.from_file(f, pdf_path, options=options, verbose=True)
-
-
-if __name__ == "__main__":
-    template_file = "templates/base.html.jinja"
-    filename = os.path.splitext(os.path.split(template_file)[1])[0]
-
-    compiled = compile_template(template_file, json.load(open("CurriculumVitae.json")))
-    with open("generated/html/test.html", "w+") as f:
-        f.write(compiled)
-
-    html2pdf("generated/html/test.html", "generated/pdf/test.pdf")
