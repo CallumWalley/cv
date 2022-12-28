@@ -1,0 +1,279 @@
+---
+basics:
+  name: Callum M Walley
+  label: Engineer
+  image: ''
+  email: callumnmw@gmail.com
+  phone: '02102703104'
+  url: ''
+  summary: ''
+  location:
+    city: Auckland
+    countryCode: NZ
+  profiles:
+  - network: Twitter
+    username: john
+    url: https://twitter.com/john
+  - network: GitHub
+    username: CallumWalley
+    url: https://github.com/CallumWalley
+  - network: LinkedIn
+    username: callum-macdonald-walley-227339142
+    url: https://www.linkedin.com/in/callum-macdonald-walley-227339142/
+  - network: tycho
+    username: CallumWalley
+    url: https://github.com/CallumWalley
+work:
+- name: NeSI
+  nameLong: New Zealand eScience Infrastructure
+  position: Applications Support Specialist
+  url: https://support.nesi.org.nz/hc/en-gb
+  startDate: '2018'
+  endDate: Present
+  summary: Support...
+  highlights:
+  - Training
+- name: Tycho
+  position: President
+  url: https://company.com
+  startDate: '2018'
+  endDate: Present
+  summary: Description…
+  highlights:
+  - Started the company
+- name: AUT
+  position: Research Assistant
+  url: ''
+  startDate: '2016'
+  endDate: '2017'
+  summary: Description…
+  highlights:
+  - UAV Controller design
+  - Instrumentation
+- slug: wsp
+  name: White Star Products
+  position: Trainee Engineer
+  url: https://swageturn.com/
+  startDate: '2017'
+  endDate: '2018'
+  summary: ''
+  highlights:
+  - Made the website
+volunteer:
+- organization: ARHT
+  organizationLong: Auckland Rescue Helicopter Trust
+  position: Simulator Instructor
+  url: ''
+  startDate: '2013'
+  endDate: '2021'
+  summary: ''
+  highlights:
+  - Represented Volanteers at 2014 Royal Reception (Met Harry).
+education:
+- slug: aut
+  institution: AUT University
+  institutionLong: Auckland University of Technology University
+  url: ''
+  area: Mechanical Engineering
+  studyType: Honors
+  startDate: '2013'
+  endDate: '2017'
+awards:
+- slug: ''
+  title: ''
+  date: ''
+  awarder: ''
+  summary: ''
+qualifications:
+- slug: swc-instructor
+  name: Software Carpentries Instructor
+  date: '2019-07-29'
+  issuer: The Carpentries
+  url: https://carpentries.org/instructors/
+- slug: coastal-skipper
+  name: Coastal Skipper
+  date: ''
+  issuer-short: RYA
+  issuer: Royal Yachting Association
+  url: ''
+- slug: icc
+  name: International Certificate of Competence (Sailing)
+  date: ''
+  issuer-short: RYA
+  issuer: Royal Yachting Association
+  url: ''
+- slug: boatmaster
+  name: Boatmaster
+  date: ''
+  issuer: Royal New Zealand Coastguard
+  url: ''
+- slug: vhf-operator
+  name: VHF Operator
+  date: ''
+  issuer: Royal New Zealand Coastguard
+  url: ''
+- slug: advanced-ssi
+  name: Advanced Open Water Diver
+  date: ''
+  issuer-short: SSI
+  issuer: Scuba Schools International
+  url: ''
+- slug: padi-rescue
+  name: Rescue Diver
+  date: ''
+  issuer-short: PADI
+  issuer: " Professional Association of Diving Instructors"
+  url: ''
+- slug: padi-enriched
+  name: Enriched Air Diver
+  date: ''
+  issuer-short: PADI
+  issuer: " Professional Association of Diving Instructors"
+  url: ''
+- slug: first-aid
+  name: Emergency First Responder
+  date: ''
+  issuer: ''
+  url: ''
+- slug: drivers-lic
+  name: Full Drivers Licence
+  date: ''
+  issuer-short: NZTA
+  issuer: ''
+  url: https://carpentries.org/instructors/
+skills:
+- name: Training
+  description: I find training very fulfilling. I have been significantly involved
+    in development of training materials, organisation and delivery of workshops,
+    webinars, etc
+  highlights:
+  - ''
+  keywords: []
+- slug: docs
+  name: Information Architecture
+  description: Similar to training, I find organising information in a way that is
+    easy to find, intuative and digestable.
+  highlights:
+  - ''
+  keywords: []
+- slug: cad
+  name: Engineering CAD
+  description: ''
+  highlights:
+  - ''
+  keywords:
+  - Solidworks
+  - CadQuery
+- slug: rse
+  name: Scientific Programming
+  description: ''
+  highlights:
+  - ''
+  keywords: []
+- name: DevOps
+  description: ''
+  highlights:
+  - ''
+  keywords:
+  - GitLab/GitHub
+  - CI/CD
+  - Automation
+- name: Data Science
+  description: ''
+  highlights:
+  - ''
+  keywords:
+  - GitLab/GitHub
+  - CI/CD
+  - Automation
+- slug: hpc
+  name: High Performance Computing
+  description: ''
+  highlights:
+  - Bash
+  - Scheduler (SLURM)
+  keywords: []
+- slug: design
+  name: Digital Design
+  description: ''
+  highlights:
+  - ''
+  keywords:
+  - Adobe Suite
+  - GIMP
+  - Krita
+  - Blender
+  - InkScape
+languages:
+- slug: c
+  language: C/C++/C#
+  experience: ''
+  keywords: []
+- slug: js
+  language: JavaScript
+  experience: Node and frontend.
+  keywords: []
+- slug: web
+  language: HTML/CSS
+  experience: Still prefer making websites from scratch.
+  keywords: []
+- language: PHP
+  experience: Unfortunately
+  keywords: []
+- language: Python
+  experience: ''
+  keywords: []
+- language: MATLAB
+  experience: ''
+  keywords: []
+- language: Bash
+  experience: I bash everything
+  keywords: []
+- language: Fortran
+  experience: lil
+  keywords: []
+- language: LUA
+  experience: lil bit
+  keywords: []
+- language: TCL
+  experience: lil bit
+  keywords: []
+- language: VBA
+  experience: Shamefully
+  keywords: []
+interests:
+- name: Hiking
+  keywords: []
+- name: Sailing
+  keywords: []
+- name: Art
+  keywords: []
+- name: Coding
+  keywords: []
+- name: Tinkering
+  keywords: []
+references:
+- name: Gene Soudlenkov
+  reference: Manager, NeSI
+  contact:
+    phone: not a real phonenumber
+    email: not a real email
+- name: Blair Bethwaite
+  reference: NeSI Manager
+  contact:
+    email: blair.bethwaite@nesi.org.nz
+    blood-sacrifice: not a real contact method
+projects:
+- name: ''
+  description: ''
+  highlights:
+  - ''
+  keywords:
+  - HTML
+  startDate: ''
+  endDate: ''
+  url: ''
+  roles:
+  - ''
+  entity: ''
+  type: ''
