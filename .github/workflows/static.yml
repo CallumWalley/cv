@@ -41,6 +41,13 @@ jobs:
             pip install -r requirements.txt
       - name: Generate Pages
         run: python3 render.py
+      - name: Commit to main
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git add --all
+          git commit -m "Outpus of render.py" 
+          git push -f origin main
       - name: Move assets
         run: mv style/* docs
       - name: Setup Pages
