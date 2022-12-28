@@ -11,7 +11,7 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -28,6 +28,10 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: get wkhtml
+        run: |
+            wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.focal_amd64.deb
+            sudo apt install -y ./wkhtmltox_0.12.6-1.focal_amd64.deb
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install dependencies
@@ -37,6 +41,13 @@ jobs:
             pip install -r requirements.txt
       - name: Generate Pages
         run: python3 render.py
+      - name: Commit to main
+        run: |
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git add --all
+          git commit -m "Outpus of render.py" 
+          git push -f origin main
       - name: Move assets
         run: mv style/* docs
       - name: Setup Pages
