@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import jinja2
 import os
 import glob
@@ -9,7 +11,7 @@ import yaml
 from slugify import slugify
 from pathlib import Path
 
-CV_FILE = "CurriculumVitae.yaml"
+CV_FILE = "CurriculumVitae.json"
 VIBES_FILE = "vibes.yaml"
 TEMPLATES = "templates"
 
