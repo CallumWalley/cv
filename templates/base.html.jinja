@@ -9,15 +9,15 @@
 <body>
 
     <h1 id="name"></h1> &nbsp; <span class="docname">Curriculum Vit&aelig;</span>
-    <div class="columnn__contain">
-        <div class="vline"></div>
+    <div class="vline"></div>
 
+    <div class="column-contain">
         {% if education|length > 0 %}
         <div class="columnn columnn--left">
             <h2 id="education">Education</h2>
-            <div class="block__contain">
+            <div class="block-contain">
                 {% for item in education %}
-                <div class="block__item">
+                <div class="block">
                     <div class="yearrange">{{item.startDate}}&#8211;{{item.endDate}}</div>
                     <div class="yearright">
                         <strong>{{item.institution}}</strong><br />
@@ -32,9 +32,9 @@
         {% if work|length > 0 %}
         <div class="columnn columnn--right">
             <h2 id="education">Work</h2>
-            <div class="block__contain">
+            <div class="block-contain">
                 {% for item in work %}
-                <div class="block__item">
+                <div class="block">
                     <div class="yearrange">{{item.startDate}}&#8211;{{item.endDate}}</div>
                     <div class="yearright">
                         <strong>{{item.name}}</strong><br />
