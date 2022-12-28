@@ -9,7 +9,7 @@ import yaml
 from slugify import slugify
 from pathlib import Path
 
-CV_FILE = "CurriculumVitae.json"
+CV_FILE = "CurriculumVitae.yaml"
 VIBES_FILE = "vibes.yaml"
 TEMPLATES = "templates"
 
