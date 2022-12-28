@@ -71,7 +71,8 @@
             ]
         },
         {
-            "name": "White Star ",
+            "slug": "wsp",
+            "name": "White Star Products",
             "position": "Trainee Engineer",
             "url": "https://swageturn.com/",
             "startDate": "2017",
@@ -98,6 +99,7 @@
     ],
     "education": [
         {
+            "slug": "aut",
             "institution": "AUT University",
             "institutionLong": "Auckland University of Technology University",
             "url": "",
@@ -109,6 +111,7 @@
     ],
     "awards": [
         {
+            "slug": "",
             "title": "",
             "date": "",
             "awarder": "",
@@ -117,19 +120,22 @@
     ],
     "qualifications": [
         {
+            "slug": "swc-instructor",
             "name": "Software Carpentries Instructor",
             "date": "2019-07-29",
             "issuer": "The Carpentries",
             "url": "https://carpentries.org/instructors/"
         },
         {
-            "name": "RYA Coastal Skipper",
+            "slug": "coastal-skipper",
+            "name": "Coastal Skipper",
             "date": "",
             "issuer-short": "RYA",
             "issuer": "Royal Yachting Association",
             "url": ""
         },
         {
+            "slug": "icc",
             "name": "International Certificate of Competence (Sailing)",
             "date": "",
             "issuer-short": "RYA",
@@ -137,18 +143,21 @@
             "url": ""
         },
         {
+            "slug": "boatmaster",
             "name": "Boatmaster",
             "date": "",
             "issuer": "Royal New Zealand Coastguard",
             "url": ""
         },
         {
+            "slug": "vhf-operator",
             "name": "VHF Operator",
             "date": "",
             "issuer": "Royal New Zealand Coastguard",
             "url": ""
         },
         {
+            "slug": "advanced-ssi",
             "name": "Advanced Open Water Diver",
             "date": "",
             "issuer-short": "SSI",
@@ -156,6 +165,7 @@
             "url": ""
         },
         {
+            "slug": "padi-rescue",
             "name": "Rescue Diver",
             "date": "",
             "issuer-short": "PADI",
@@ -163,6 +173,7 @@
             "url": ""
         },
         {
+            "slug": "padi-enriched",
             "name": "Enriched Air Diver",
             "date": "",
             "issuer-short": "PADI",
@@ -170,26 +181,19 @@
             "url": ""
         },
         {
+            "slug": "first-aid",
             "name": "Emergency First Responder",
             "date": "",
             "issuer": "",
             "url": ""
         },
         {
+            "slug": "drivers-lic",
             "name": "Full Drivers Licence",
             "date": "",
             "issuer-short": "NZTA",
             "issuer": "",
             "url": "https://carpentries.org/instructors/"
-        }
-    ],
-    "publications": [
-        {
-            "name": "",
-            "publisher": "",
-            "releaseDate": "",
-            "url": "",
-            "summary": ""
         }
     ],
     "skills": [
@@ -202,6 +206,7 @@
             "keywords": []
         },
         {
+            "slug": "docs",
             "name": "Information Architecture",
             "description": "Similar to training, I find organising information in a way that is easy to find, intuative and digestable.",
             "highlights": [
@@ -210,6 +215,7 @@
             "keywords": []
         },
         {
+            "slug": "cad",
             "name": "Engineering CAD",
             "description": "",
             "highlights": [
@@ -221,6 +227,7 @@
             ]
         },
         {
+            "slug": "rse",
             "name": "Scientific Programming",
             "description": "",
             "highlights": [
@@ -253,6 +260,7 @@
             ]
         },
         {
+            "slug": "hpc",
             "name": "High Performance Computing",
             "description": "",
             "highlights": [
@@ -262,6 +270,7 @@
             "keywords": []
         },
         {
+            "slug": "design",
             "name": "Digital Design",
             "description": "",
             "highlights": [
@@ -278,16 +287,19 @@
     ],
     "languages": [
         {
+            "slug": "c",
             "language": "C/C++/C#",
             "experience": "",
             "keywords": []
         },
         {
+            "slug": "js",
             "language": "JavaScript",
             "experience": "Node and frontend.",
             "keywords": []
         },
         {
+            "slug": "web",
             "language": "HTML/CSS",
             "experience": "Still prefer making websites from scratch.",
             "keywords": []
