@@ -9,52 +9,47 @@
 <body>
 
     <h1 id="name"></h1> &nbsp; <span class="docname">Curriculum Vit&aelig;</span>
-
+    <div class="main">
     <div class="vline"></div>
+    
     {% if education|length > 0 %}
-
+    <div class="block block--left">
     <h2 id="education">Education</h2>
-
-    <div class="block">
+        <div class="block__contain">
         {% for item in education %}
-        <div class="item">
-            <div class="yearrange">{{item.start}}&#8211;{{item.end}}</div>
+        <div class="block__item">
+            <div class="yearrange">{{item.startDate}}&#8211;{{item.endDate}}</div>
             <div class="yearright">
-                <strong>{{item.place}}</strong><br />
-                {{item.degree}}<br />
-                {% if item.lab %}{{item.lab}}<br />{% endif %}
-                {% if item.advisor %}Advisor: {{item.advisor}}<br />{% endif %}
+                <strong>{{item.institution}}</strong><br />
+                {{item.area}}-{{item.studyType}}<br />
             </div>
         </div>
         {% endfor %}
+        </div>
     </div>
     {% endif %}
 
     {% if work|length > 0 %}
-    <h2 id="work">Work</h2>
-    <div class="block">
-        {% for item in work %}
-        <div class="onelineitem">
-            <div class="yearrange">{{item.start}}&#8211;{{item.end}}</div>
-            <div class="yearright">
-                <strong>{{item.title}}</strong>, {{item.place}}
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-    {% endif %}
+    <div class="block block--right">
+    <h2 id="education">Education</h2>
+        <div class="block__contain">
 
-    {% if volunteer|length > 0 %}
-    <h2 id="volanteer">Volanteer</h2>
-    <div class="block">
-        {% for item in volunteer %}
-        <div class="onelineitem">
-            <div class="yearrange">{{item.start}}&#8211;{{item.end}}</div>
+        {% for item in work %}
+        <div class="block__item">
+            <div class="yearrange">{{item.startDate}}&#8211;{{item.endDate}}</div>
             <div class="yearright">
-                <strong>{{item.title}}</strong>, {{item.place}}
+                <strong>{{item.name}}</strong><br />
+                <p>{{item.position}}</p><br />
+                <p>{{item.summary}}</p><br />
+                {% if work.highlights | length > 0 %}
+                {% for hl in work.highlights %}
+                {{hl}}<br />
+                {% endfor %}
+                {% endif %}
             </div>
         </div>
         {% endfor %}
+        </div>
     </div>
     {% endif %}
 
