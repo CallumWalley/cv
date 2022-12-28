@@ -1,16 +1,18 @@
 
-** Idea **
-* JSON file should drive creation of CV. 
+**Idea**
+
+* JSON file should drive creation of CV.
 * Tag information for multiple variations. e.g.
-    * cv-design.pdf
-    * cv-engineering.pdf
-    * cv-computerscience.pdf
+  * cv-design.pdf
+  * cv-engineering.pdf
+  * cv-computerscience.pdf
 * Also generate gh-pages page.
 * CI/CD
 * Python / Jinja (for pdf format at least). Maybe MKdocs for gh-pages
 
-
 Inspired somewhat by this
 
-* https://timsainburg.com/curriculum-vitae-in-python-html-jinja.html
-* JSON resume https://jsonresume.org/
+* <https://timsainburg.com/curriculum-vitae-in-python-html-jinja.html>
+* JSON resume <https://jsonresume.org/>
+
+Similar to <https://github.com/nikaro/resume-pycli>
