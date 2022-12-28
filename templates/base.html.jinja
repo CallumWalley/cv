@@ -11,13 +11,13 @@
     <h1 id="name"></h1> &nbsp; <span class="docname">Curriculum Vit&aelig;</span>
     <div class="vline"></div>
 
-    <div class="column-contain">
+    <div class="main">
         {% if education|length > 0 %}
-        <div class="columnn columnn--left">
+        <div class="column column--left">
             <h2 id="education">Education</h2>
-            <div class="block-contain">
+            <div class="block">
                 {% for item in education %}
-                <div class="block">
+                <div class="item">
                     <div class="yearrange">{{item.startDate}}&#8211;{{item.endDate}}</div>
                     <div class="yearright">
                         <strong>{{item.institution}}</strong><br />
@@ -28,23 +28,25 @@
             </div>
         </div>
         {% endif %}
-
         {% if work|length > 0 %}
-        <div class="columnn columnn--right">
+        <div class="column column--right">
             <h2 id="education">Work</h2>
-            <div class="block-contain">
+            <div class="block">
                 {% for item in work %}
-                <div class="block">
-                    <div class="yearrange">{{item.startDate}}&#8211;{{item.endDate}}</div>
-                    <div class="yearright">
-                        <strong>{{item.name}}</strong><br />
-                        <p>{{item.position}}</p><br />
-                        <p>{{item.summary}}</p><br />
-                        {% if work.highlights | length > 0 %}
-                        {% for hl in work.highlights %}
-                        {{hl}}<br />
-                        {% endfor %}
-                        {% endif %}
+                <div class="item">
+                    <div class="comp comp__header">{{item.startDate}}&#8211;{{item.endDate}}</div>
+                    <div class="comp comp__body">
+                        <i class="comp comp__icon"></i>
+                        <div class="comp content">
+                            <strong>{{item.name}}</strong><br />
+                            <p>{{item.position}}</p><br />
+                            <p>{{item.summary}}</p><br />
+                            {% if work.highlights | length > 0 %}
+                            {% for hl in work.highlights %}
+                            {{hl}}<br />
+                            {% endfor %}
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
                 {% endfor %}

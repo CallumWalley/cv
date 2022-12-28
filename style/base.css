@@ -37,7 +37,7 @@ strong {
     font-weight: 400;
 }
 
-.column-contain{
+.main{
     display: flex;
 }
 
@@ -53,6 +53,10 @@ strong {
     margin-bottom: 0.5em;
     display: table;
     page-break-inside: avoid;
+}
+
+.comp{
+    display: flex;
 }
 
 .year {
