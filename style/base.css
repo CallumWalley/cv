@@ -69,6 +69,10 @@ strong {
     display: flex;
 }
 
+.comp--flexcol{
+    flex-direction: column;
+}
+
 .year {
     width: 48px;
     display: table-cell;

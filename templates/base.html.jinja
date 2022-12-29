@@ -21,30 +21,28 @@
                     <div class="yearrange">{{item.startDate}}&#8211;{{item.endDate}}</div>
                     <div class="yearright">
                         <strong>{{item.institution}}</strong><br />
-                        {{item.area}}-{{item.studyType}}<br />
+                        {{item.area}}-{{item.studyType}}
                     </div>
                 </div>
                 {% endfor %}
             </div>
             {% endif %}
-        </div>
-        <div class="column column--right">
-            {% if work|length > 0 %}
+            {% if (work + volunteer)|length > 0 %}
             <h2 id="work">Work</h2>
             <div class="block">
                 {% for item in ((work + volunteer) | sort(attribute='startDate')) %}
                 <div class="item">
-                    <h3 class="comp comp__header">{{item.startDate}}&#8211;{{item.endDate}} - {{item.name}}</h3>
+                    <h3 class="comp comp__header"><div class="yearrange">{{item.startDate}}&#8211;{{item.endDate}}</div> - {{item.name}}</h3>
                     <div class="comp comp__body">
                         <i class=" comp comp__icon material-icons">
                             alternate_email
                         </i>
-                        <div class="comp content">
-                            <p>{{item.position}}</p><br />
-                            <p>{{item.summary}}</p><br />
+                        <div class="comp comp--flexcol">
+                            <em>{{item.position}}</em>
+                            <p>{{item.summary}}</p>
                             {% if work.highlights | length > 0 %}
                             {% for hl in work.highlights %}
-                            {{hl}}<br />
+                            {{hl}}
                             {% endfor %}
                             {% endif %}
                         </div>
@@ -53,6 +51,43 @@
                 {% endfor %}
             </div>
             {% endif %}
+        </div>
+        <div class="column column--right">
+            {% if (skills)|length > 0 %}
+            <h2 id="skills">Skills</h2>
+            <div class="block">
+                {% for item in skills) %}
+                <div class="item">
+                    <h3 class="comp comp__header">{{item.name}}</h3>
+                    <div class="comp comp__body">
+                        <i class=" comp comp__icon material-icons">
+                            alternate_email
+                        </i>
+                        <div class="comp comp--flexcol">
+                          {{item.description}}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% if (languages)|length > 0 %}
+                <h2 id="languages">languages</h2>
+                <div class="block">
+                {%for lang in languages%}
+                <div>{{lang.language}}</div>
+                {%endfor%}
+                </div>
+            {%endif%}
+                        {% if (qualifications)|length > 0 %}
+                <h2 id="qualifications">qualifications</h2>
+                <div class="block">
+                {%for qual in qualifications%}
+                <em>{{qual.issuer-short}} {{qual.name}}</em>
+                {%endfor%}
+                </div>
+            {%endif%}
+
         </div>
     </div>
     <div class="block">
