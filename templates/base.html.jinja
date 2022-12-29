@@ -12,8 +12,8 @@
     <div class="vline"></div>
 
     <div class="main">
-        {% if education|length > 0 %}
         <div class="column column--left">
+            {% if education|length > 0 %}
             <h2 id="education">Education</h2>
             <div class="block">
                 {% for item in education %}
@@ -26,36 +26,34 @@
                 </div>
                 {% endfor %}
             </div>
+            {% endif %}
         </div>
-        {% endif %}
-        {% if work|length > 0 %}
         <div class="column column--right">
+            {% if work|length > 0 %}
             <h2 id="work">Work</h2>
             <div class="block">
-                {% for item in work | sort(attribute='startDate') %}
+                {% for item in ((work + volunteer) | sort(attribute='startDate')) %}
                 <div class="item">
-                    <h3 class="comp comp__header">{{item.startDate}}&#8211;{{item.endDate}} - {{item.name}}
-                </div>
-                <div class="comp comp__body">
-                    <i class=" comp comp__icon material-icons">
-                        alternate_email
-                    </i>
-                    <div class="comp content">
-                        <p>{{item.position}}</p><br />
-                        <p>{{item.summary}}</p><br />
-                        {% if work.highlights | length > 0 %}
-                        {% for hl in work.highlights %}
-                        {{hl}}<br />
-                        {% endfor %}
-                        {% endif %}
+                    <h3 class="comp comp__header">{{item.startDate}}&#8211;{{item.endDate}} - {{item.name}}</h3>
+                    <div class="comp comp__body">
+                        <i class=" comp comp__icon material-icons">
+                            alternate_email
+                        </i>
+                        <div class="comp content">
+                            <p>{{item.position}}</p><br />
+                            <p>{{item.summary}}</p><br />
+                            {% if work.highlights | length > 0 %}
+                            {% for hl in work.highlights %}
+                            {{hl}}<br />
+                            {% endfor %}
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-                {% endif %}
-
+            {% endif %}
         </div>
-    </div>
     </div>
     <div class="block">
         {% for reference in references %}
