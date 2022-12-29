@@ -18,11 +18,11 @@
             <div class="block">
                 {% for item in education %}
                 <div class="item">
+                <div class="comp comp__header">
                     <div class="yearrange">{{item.startDate}}&#8211;{{item.endDate}}</div>
-                    <div class="yearright">
-                        <strong>{{item.institution}}</strong><br />
-                        {{item.area}}-{{item.studyType}}
-                    </div>
+                    <h3 {{item.institution}} <h3>
+                    <em>{{item.area}}-{{item.studyType}}</em>
+                </div>
                 </div>
                 {% endfor %}
             </div>
@@ -32,7 +32,10 @@
             <div class="block">
                 {% for item in ((work + volunteer) | sort(attribute='startDate')) %}
                 <div class="item">
-                    <h3 class="comp comp__header"><div class="yearrange">{{item.startDate}}&#8211;{{item.endDate}}</div> - {{item.name}}</h3>
+                    <div class="comp comp__header">
+                    <div class="yearrange">{{item.startDate}}&#8211;{{item.endDate}}</div> 
+                    <h3>{{item.name}}</h3>
+                    </div>
                     <div class="comp comp__body">
                         <i class=" comp comp__icon material-icons">
                             alternate_email
