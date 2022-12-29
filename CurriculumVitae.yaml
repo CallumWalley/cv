@@ -93,13 +93,13 @@ qualifications:
 - slug: coastal-skipper
   name: Coastal Skipper
   date: ''
-  issuer-short: RYA
+  issuer_short: RYA
   issuer: Royal Yachting Association
   url: ''
 - slug: icc
   name: International Certificate of Competence (Sailing)
   date: ''
-  issuer-short: RYA
+  issuer_short: RYA
   issuer: Royal Yachting Association
   url: ''
 - slug: boatmaster
@@ -115,19 +115,19 @@ qualifications:
 - slug: advanced-ssi
   name: Advanced Open Water Diver
   date: ''
-  issuer-short: SSI
+  issuer_short: SSI
   issuer: Scuba Schools International
   url: ''
 - slug: padi-rescue
   name: Rescue Diver
   date: ''
-  issuer-short: PADI
+  issuer_short: PADI
   issuer: " Professional Association of Diving Instructors"
   url: ''
 - slug: padi-enriched
   name: Enriched Air Diver
   date: ''
-  issuer-short: PADI
+  issuer_short: PADI
   issuer: " Professional Association of Diving Instructors"
   url: ''
 - slug: first-aid
@@ -138,7 +138,7 @@ qualifications:
 - slug: drivers-lic
   name: Full Drivers Licence
   date: ''
-  issuer-short: NZTA
+  issuer_short: NZTA
   issuer: ''
   url: https://carpentries.org/instructors/
 skills:
@@ -147,20 +147,17 @@ skills:
     in development of training materials, organisation and delivery of workshops,
     webinars, etc
   highlights:
-  - ''
   keywords: []
 - slug: docs
   name: Information Architecture
   description: Similar to training, I find organising information in a way that is
     easy to find, intuative and digestable.
   highlights:
-  - ''
   keywords: []
 - slug: cad
   name: Engineering CAD
   description: ''
   highlights:
-  - ''
   keywords:
   - Solidworks
   - CadQuery
@@ -168,36 +165,34 @@ skills:
   name: Scientific Programming
   description: ''
   highlights:
-  - ''
   keywords: []
 - name: DevOps
   description: ''
   highlights:
-  - ''
   keywords:
-  - GitLab/GitHub
-  - CI/CD
-  - Automation
+  - Reproducability
+  - Workflows
+  - Paralellisation
+  - Optimisation
 - name: Data Science
-  description: ''
+  description: 'Whatever this means to you, I can do it.'
   highlights:
-  - ''
   keywords:
-  - GitLab/GitHub
-  - CI/CD
+  - GitLab CI/CD
+  - GitHub Actions
   - Automation
+  - Machine Learning
+  - Visualisation
 - slug: hpc
   name: High Performance Computing
   description: ''
   highlights:
   - Bash
   - Scheduler (SLURM)
-  keywords: []
 - slug: design
   name: Digital Design
   description: ''
   highlights:
-  - ''
   keywords:
   - Adobe Suite
   - GIMP
@@ -207,7 +202,7 @@ skills:
 languages:
 - slug: c
   language: C/C++/C#
-  experience: ''
+  experience: 'Experience with research software, as well as application development.'
   keywords: []
 - slug: js
   language: JavaScript
@@ -218,10 +213,10 @@ languages:
   experience: Still prefer making websites from scratch.
   keywords: []
 - language: PHP
-  experience: Unfortunately
+  experience: Unfortunately. Extensive customisation of wordpress template for large online store.
   keywords: []
 - language: Python
-  experience: ''
+  experience: 'My go-to language for most things. Scientific programming, apps, webservices'
   keywords: []
 - language: MATLAB
   experience: ''
@@ -230,13 +225,13 @@ languages:
   experience: I bash everything
   keywords: []
 - language: Fortran
-  experience: lil
+  experience: Fundementals only. Some work with user defined algorithems in engineering apps.
   keywords: []
 - language: LUA
-  experience: lil bit
+  experience: Writing custom module files, and pandoc filters.
   keywords: []
 - language: TCL
-  experience: lil bit
+  experience: Writing custom module files, and some engineering applications.
   keywords: []
 - language: VBA
   experience: Shamefully
@@ -267,13 +262,11 @@ projects:
 - name: ''
   description: ''
   highlights:
-  - ''
   keywords:
   - HTML
   startDate: ''
   endDate: ''
   url: ''
-  roles:
-  - ''
+  roles: ''
   entity: ''
   type: ''
