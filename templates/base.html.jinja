@@ -83,7 +83,7 @@
                 <h2 id="qualifications">qualifications</h2>
                 <div class="block">
                 {%for qual in qualifications%}
-                <em>{{qual.issuer-short}} {{qual.name}}</em>
+                <em>{{qual.issuer-short or qual.issuer}} {{qual.name}}</em>
                 {%endfor%}
                 </div>
             {%endif%}
