@@ -30,29 +30,31 @@
         {% endif %}
         {% if work|length > 0 %}
         <div class="column column--right">
-            <h2 id="education">Work</h2>
+            <h2 id="work">Work</h2>
             <div class="block">
-                {% for item in work %}
+                {% for item in work | sort(attribute='startDate') %}
                 <div class="item">
-                    <div class="comp comp__header">{{item.startDate}}&#8211;{{item.endDate}}</div>
-                    <div class="comp comp__body">
-                        <i class="comp comp__icon"></i>
-                        <div class="comp content">
-                            <strong>{{item.name}}</strong><br />
-                            <p>{{item.position}}</p><br />
-                            <p>{{item.summary}}</p><br />
-                            {% if work.highlights | length > 0 %}
-                            {% for hl in work.highlights %}
-                            {{hl}}<br />
-                            {% endfor %}
-                            {% endif %}
-                        </div>
+                    <h3 class="comp comp__header">{{item.startDate}}&#8211;{{item.endDate}} - {{item.name}}
+                </div>
+                <div class="comp comp__body">
+                    <i class=" comp comp__icon material-icons">
+                        alternate_email
+                    </i>
+                    <div class="comp content">
+                        <p>{{item.position}}</p><br />
+                        <p>{{item.summary}}</p><br />
+                        {% if work.highlights | length > 0 %}
+                        {% for hl in work.highlights %}
+                        {{hl}}<br />
+                        {% endfor %}
+                        {% endif %}
                     </div>
                 </div>
-                {% endfor %}
             </div>
+            {% endfor %}
         </div>
-        {% endif %}
+    </div>
+    {% endif %}
     </div>
     <div class="block">
         {% for reference in references %}
