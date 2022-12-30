@@ -7,13 +7,12 @@
 </head>
 
 <body>
-
     <h1 id="name"></h1> &nbsp; <span class="docname">Curriculum Vit&aelig;</span>
     <div class="vline"></div>
-
     <div class="main">
         <div class="column column--left">
             {% if education|length > 0 %}
+            <div class="linebox"></div>
             <h2 id="education">Education</h2>
             <div class="block">
                 {% for item in education %}
@@ -28,6 +27,7 @@
             </div>
             {% endif %}
             {% if (work + volunteer)|length > 0 %}
+            <div class="linebox"></div>
             <h2 id="work">Work</h2>
             <div class="block">
                 {% for item in ((work + volunteer) | sort(attribute='startDate')) %}
@@ -57,6 +57,7 @@
         </div>
         <div class="column column--right">
             {% if (skills)|length > 0 %}
+            <div class="linebox"></div>
             <h2 id="skills">Skills</h2>
             <div class="block">
                 {% for item in skills %}
@@ -75,6 +76,7 @@
             </div>
             {% endif %}
             {% if (languages)|length > 0 %}
+            <div class="linebox"></div>
             <h2 id="languages">languages</h2>
             <div class="block">
                 {%for lang in languages%}
@@ -83,6 +85,7 @@
             </div>
             {%endif%}
             {% if (qualifications)|length > 0 %}
+            <div class="linebox"></div>
             <h2 id="qualifications">qualifications</h2>
             <div class="block">
                 {%for qual in qualifications%}

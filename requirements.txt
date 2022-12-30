@@ -1,3 +1,4 @@
 css-html-js-minify
 pdfkit
 python-slugify
+libsass
