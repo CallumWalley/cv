@@ -12,13 +12,11 @@
     <div class="main">
         <div class="column column--left">
             {% if education|length > 0 %}
-            <div class="linebox"></div>
             <h2 id="education">Education</h2>
             <div class="block">
                 {% for item in education %}
                 <div class="item">
                     <div class="comp comp__header">
-                        <div class="linebox"></div>
                         <h3> {{item.institution}} </h3>
                         <div class="yearrange">{{item.startDate}}&#8211;{{item.endDate}}</div>
                     </div>
@@ -30,13 +28,11 @@
             </div>
             {% endif %}
             {% if (work + volunteer)|length > 0 %}
-            <div class="linebox"></div>
             <h2 id="work">Work</h2>
             <div class="block">
                 {% for item in ((work + volunteer) | sort(attribute='startDate')) %}
                 <div class="item">
                     <div class="comp comp__header">
-                        <div class="linebox"></div>
                         <h3>{{item.name}}</h3>
                         <div class="yearrange">{{item.startDate}}&#8211;{{item.endDate}}</div>
                     </div>
@@ -61,13 +57,11 @@
         </div>
         <div class="column column--right">
             {% if (skills)|length > 0 %}
-            <div class="linebox"></div>
             <h2 id="skills">Skills</h2>
             <div class="block">
                 {% for item in skills %}
                 <div class="item">
                     <div class="comp comp__header">
-                        <div class="linebox"></div>
                         <h3 class="comp comp__header">{{item.name}}</h3>
                     </div>
                     <div class="comp comp__body">
@@ -83,12 +77,10 @@
             </div>
             {% endif %}
             {% if (languages)|length > 0 %}
-            <div class="linebox"></div>
             <h2 id="languages">Languages</h2>
             <div class="block">
                 {% for group, items in languages|groupby(attribute="rating", default="It's complicated") %}
                 <div class="item">
-                    <div class="linebox"></div>
                     <h3>{{group}}</h3>
                     {%for item in items %}
                     <div>{{item.language}}</div>
@@ -98,7 +90,6 @@
             </div>
             {%endif%}
             {% if (qualifications)|length > 0 %}
-            <div class="linebox"></div>
             <h2 id="qualifications">Qualifications</h2>
             <div class="block">
                 {%for qual in qualifications%}
@@ -106,7 +97,6 @@
                 {%endfor%}
             </div>
             {%endif%}
-
         </div>
     </div>
     <div class="block">
