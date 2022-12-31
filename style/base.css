@@ -101,10 +101,11 @@ strong {
 }
 
 .yearrange {
-    width: 92px;
     font-style: italic;
     color: grey;
-    display: table-cell;
+    place-self: flex-end;
+    white-space: nowrap;
+    margin-left: 1em;
 }
 
 .onelineitem {
