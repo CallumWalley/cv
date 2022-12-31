@@ -86,11 +86,11 @@
             <div class="linebox"></div>
             <h2 id="languages">Languages</h2>
             <div class="block">
-                {% for group, items in languages|groupby(attribute="rating", default="Complicated") %}
+                {% for group, items in languages|groupby(attribute="rating", default="It's complicated") %}
                 <div class="item">
                     <div class="linebox"></div>
                     <h3>{{group}}</h3>
-                    {%for item in group %}
+                    {%for item in items %}
                     <div>{{item.language}}</div>
                     {%endfor%}
                 </div>
