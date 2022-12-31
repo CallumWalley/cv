@@ -43,10 +43,12 @@
                         <div class="comp comp--flexcol">
                             <em>{{item.position}}</em>
                             <p>{{item.summary}}</p>
-                            {% if work.highlights | length > 0 %}
-                            {% for hl in work.highlights %}
-                            {{hl}}
-                            {% endfor %}
+                            {% if item.highlights | length > 0 %}
+                            <ul>
+                                {% for hl in item.highlights %}
+                                <li>{{hl}}</li>li>
+                                {% endfor %}
+                            </ul>
                             {% endif %}
                         </div>
                     </div>

@@ -12,8 +12,8 @@ basics:
     countryCode: NZ
   profiles:
   - network: Twitter
-    username: john
-    url: https://twitter.com/john
+    username: calw
+    url: https://twitter.com/calw
   - network: GitHub
     username: CallumWalley
     url: https://github.com/CallumWalley
@@ -29,18 +29,21 @@ work:
   position: Applications Support Specialist
   url: https://support.nesi.org.nz/hc/en-gb
   startDate: '2018'
-  endDate: Present
-  summary: Support...
+  endDate: Current
+  summary: Support
   highlights:
   - Training
+  - Documentation
+  - eRNZ
 - name: Tycho
-  position: President
+  position: Sole Employee
   url: https://company.com
   startDate: '2018'
-  endDate: Present
-  summary: Description…
+  endDate: Current
+  summary: Engineering Design
   highlights:
-  - Started the company
+  - Engineering CAD
+  - Primarily Long Term Clients
 - name: AUT
   position: Research Assistant
   url: ''
@@ -48,8 +51,9 @@ work:
   endDate: '2017'
   summary: Description…
   highlights:
-  - UAV Controller design
-  - Instrumentation
+  - UAV Controller Design
+  - IMU Filters
+  - Instrumentation Design
 - slug: wsp
   name: White Star Products
   position: Trainee Engineer
@@ -58,7 +62,11 @@ work:
   endDate: '2018'
   summary: ''
   highlights:
-  - Made the website
+  - Built <a href="www.swageturn.co.nz">www.swageturn.co.nz</a>
+  - Models, renders, and sheets for 200+ parts
+  - Marketing Material
+  - Product Management
+  - Engineering Advice
 volunteer:
 - name: ARHT
   organizationLong: Auckland Rescue Helicopter Trust
@@ -68,8 +76,16 @@ volunteer:
   endDate: '2021'
   summary: ''
   highlights:
-  - Represented Volanteers at 2014 Royal Reception (Met Harry).
+  - Represented Volanteers at 2014 Royal Reception.
 education:
+- slug: macleans
+  institution: Macleans Collage
+  startDate: '2006'
+  endDate: '2012'
+  highlights: 
+  - Service Prefect
+  - Distiction in Computer Science
+  - IGCSE A Levels
 - slug: aut
   institution: AUT University
   institutionLong: Auckland University of Technology University
@@ -79,11 +95,9 @@ education:
   startDate: '2013'
   endDate: '2017'
 awards:
-- slug: ''
-  title: ''
-  date: ''
-  awarder: ''
-  summary: ''
+- slug: 'kinvig'
+  title: 'Kinvig Scholarship'
+  awarder: 'Scouts New Zealand'
 qualifications:
 - slug: swc-instructor
   name: Software Carpentries Instructor
@@ -140,124 +154,152 @@ qualifications:
   date: ''
   issuer_short: NZTA
   issuer: ''
-  url: https://carpentries.org/instructors/
+  url: 
 skills:
 - name: Training
   description: I find training very fulfilling. I have been significantly involved
     in development of training materials, organisation and delivery of workshops,
     webinars, etc
   highlights:
-  keywords: []
-- slug: docs
+  - Software Carpentry Instructor
+  - Webinars
+  - Workshops at Resbaz 2019-2022
+  - Workshops at eRNZ 2021, 2022
+  - Workshops at NZRSE 2020, 2022
+ - slug: docs
   name: Information Architecture
   description: Similar to training, I find organising information in a way that is
     easy to find, intuative and digestable.
   highlights:
-  keywords: []
+  - mkdocs
+  - Software Carpentary
 - slug: cad
   name: Engineering CAD
   description: ''
   highlights:
-  keywords:
   - Solidworks
   - CadQuery
 - slug: rse
   name: Scientific Programming
   description: ''
   highlights:
-  keywords: []
+  - Reproducability
+  - Workflow Design
+  - Paralellisation
+  - Optimisation
+  - FAIR
 - name: DevOps
   description: ''
   highlights:
-  keywords:
-  - Reproducability
-  - Workflows
-  - Paralellisation
-  - Optimisation
+  - CI/CD
+
 - name: Data Science
   description: 'Whatever this means to you, I can do it.'
   highlights:
-  keywords:
   - GitLab CI/CD
   - GitHub Actions
   - Automation
   - Machine Learning
   - Visualisation
+- name: Cloud Computing
+- description: ''
+- highlights:
+  - OpenStack
+  - Azure
+  - AWS
+  - Google Cloud
+  - Containers
 - slug: hpc
   name: High Performance Computing
   description: ''
-  highlights:
   - Bash
+  - Module software stack
   - Scheduler (SLURM)
+  - Containers
 - slug: design
   name: Digital Design
   description: ''
   highlights:
-  keywords:
   - Adobe Suite
   - GIMP
   - Krita
   - Blender
   - InkScape
+  - LaTex
+- slug: webdev
+  name: Web Development
+  description: ''
+  highlights:
+  - NodeJS
+  - Djanjo
+  - LAMP
+  - Wordpress
+  - Static
 languages:
 - slug: c
   language: C/C++/C#
-  experience: 'Experience with research software, as well as application development.'
-  keywords: []
+  experience: Research Software Development
+  highlights: []
   rating: Competent
 - slug: js
   language: JavaScript
-  experience: Node and frontend.
-  keywords: []
+  experience: Node and frontend
+  highlights: []
   rating: Competent
 - slug: web
   language: HTML/CSS
-  experience: Still prefer making websites from scratch.
-  keywords: []
+  experience: Commercial Web Development
+  highlights: []
   rating: Familiar
 - language: PHP
-  experience: Unfortunately. Extensive customisation of wordpress template for large online store.
-  keywords: []
+  experience: Unfortunately. Extensive customisation of wordpress template for large online store
+  highlights: []
   rating: Familiar
 - language: Python
-  experience: 'My go-to language for most things. Scientific programming, apps, webservices'
-  keywords: []
+  experience: Scientific Programming, apps, webservices
+  highlights: []
   rating: Competent
 - language: MATLAB
-  experience: ''
-  keywords: []
+  experience: Scientific Programming
+  highlights: []
   rating: Competent
 - language: Bash
   experience: I bash everything
-  keywords: []
+  highlights: []
   rating: Competent
 - language: Fortran
-  experience: Fundementals only. Some work with user defined algorithems in engineering apps.
-  keywords: []
+  experience: UDFs for CAE applications
+  highlights: []
   rating: Familiar
 - language: LUA
-  experience: Writing custom module files, and pandoc filters.
-  keywords: []
+  experience: Writing custom module files, and pandoc filters
+  highlights: []
   rating: Familiar
 - language: TCL
-  experience: Writing custom module files, and some engineering applications.
-  keywords: []
+  experience: Writing custom module files, engineering applications
+  highlights: []
   rating: Familiar
 - language: VBA
-  experience: Shamefully
-  keywords: []
+  experience: Shamefully. Generating and maintaining large product databases
+  highlights: []
   rating: Familiar
+- language: SQL
+  experience: Web backends, data visulisation
+  rating: Familiar
+  highlights: []
 interests:
 - name: Hiking
-  keywords: []
+  highlights: []
 - name: Sailing
-  keywords: []
+  highlights:
+  - Skipper Tallships Winner 2007
+  - Windsurfing
 - name: Art
-  keywords: []
+  highlights: []
 - name: Coding
-  keywords: []
+  highlights: []
 - name: Tinkering
-  keywords: []
+  highlights: []
 references:
 - name: Gene Soudlenkov
   reference: Manager, NeSI
@@ -273,7 +315,7 @@ projects:
 - name: ''
   description: ''
   highlights:
-  keywords:
+  highlights:
   - HTML
   startDate: ''
   endDate: ''
