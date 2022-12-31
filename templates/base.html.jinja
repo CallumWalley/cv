@@ -24,8 +24,9 @@
             {% set title="Skills" %}
             {% include "includes/tree.html.jinja" %}
             {% if (languages)|length > 0 %}
-            <h2 id="languages">Languages</h2>
             <div class="block">
+                <h2 id="languages">Languages</h2>
+
                 {% for group, items in languages|groupby(attribute="rating", default="It's complicated") %}
                 <div class="item">
                     <h3>{{group}}</h3>

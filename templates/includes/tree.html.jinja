@@ -5,19 +5,25 @@
     <div class="item">
         <div class="comp comp__header">
             <h3>{{item.name}}</h3>
+            {% if item.startDate %}
             <div class="yearrange">{{item.startDate}}&#8211;{{item.endDate}}</div>
+            {% endif %}
         </div>
         <div class="comp comp__body">
             <i class=" comp comp__icon material-icons">
                 alternate_email
             </i>
             <div class="comp comp--flexcol">
+                {% if item.position %}
                 <em>{{item.position}}</em>
-                <p>{{item.summary}}</p>
+                {%endif%}
+                { % if item.description% }
+                <p>{{item.description}}</p>
+                {%endif%}
                 {% if item.highlights | length > 0 %}
                 <ul>
                     {% for hl in item.highlights %}
-                    <li>{{hl}}</li>li>
+                    <li>{{hl}}</li>
                     {% endfor %}
                 </ul>
                 {% endif %}
