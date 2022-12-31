@@ -9,10 +9,6 @@ body {
     font-weight: 300;
     font-style: normal;
     font-size: 12pt;
-    max-width: 49em;
-    margin: 0 auto 2em auto;
-    line-height: 1.4;
-    padding: 0em 0.5em;
 }
 
 h1 {
@@ -36,6 +32,7 @@ h2::before {
     height: 0.5em;
     display: inline-block;
     content: " ";
+    margin-right: 0.5em;
     /* position: absolute; */
 }
 
@@ -51,6 +48,7 @@ h3::before {
     height: 0.5em;
     display: inline-block;
     content: " ";
+    margin-right: 0.5em;
 }
 
 strong {
@@ -96,45 +94,13 @@ strong {
     flex-direction: column;
 }
 
-.year {
-    width: 48px;
-    display: table-cell;
-}
-
 .yearrange {
     font-style: italic;
     color: grey;
-    place-self: flex-end;
     white-space: nowrap;
-    margin: 16px;
-}
-
-.onelineitem {
-    margin-bottom: 5px;
-    display: table;
-    page-break-inside: avoid;
-}
-
-#name {
-    page-break-after: avoid;
-    font-size: 20pt;
-    font-weight: 500;
-    margin-bottom: 0px;
-}
-
-.row {
-    display: table-row;
-}
-
-.cell {
-    display: table-cell;
-    text-align: center;
-    padding-left: 5px;
-    padding-right: 5px;
 }
 
 p {
-    margin: 0 0 0.4em 0;
     color: darkslategrey;
 }
 
@@ -142,11 +108,6 @@ p {
     width: 100%;
     height: 1px;
     background-color: #000;
-    margin: 0 0 0.6em 0;
-}
-
-.docname {
-    font-size: 133%;
 }
 
 @media print {
