@@ -60,7 +60,7 @@ work:
   highlights:
   - Made the website
 volunteer:
-- organization: ARHT
+- name: ARHT
   organizationLong: Auckland Rescue Helicopter Trust
   position: Simulator Instructor
   url: ''
