@@ -86,13 +86,12 @@
             <div class="linebox"></div>
             <h2 id="languages">Languages</h2>
             <div class="block">
-                {% for group, items in languages|groupby("rating", default="NY") %}
-                {#% for lang in languages %#}
+                {% for group, items in languages|groupby("rating", default="Complicated") %}
                 <div class="item">
                     <div class="linebox"></div>
                     <h3>{{group}}</h3>
-                    {%for item in items %}
-                    <div>{{item.rating}}</div>
+                    {%for item in group %}
+                    <div>{{item.language}}</div>
                     {%endfor%}
                 </div>
                 {% endfor %}
