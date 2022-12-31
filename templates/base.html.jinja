@@ -84,12 +84,10 @@
             {% endif %}
             {% if (languages)|length > 0 %}
             <div class="linebox"></div>
-            <h2 id="languages">languages</h2>
+            <h2 id="languages">Languages</h2>
             <div class="block">
-                {#
-                {% for group, items in languages|groupby("rating") %}
-                #}
-                {% for lang in languages %}
+                {% for group, items in languages|groupby("rating", default="NY") %}
+                {#% for lang in languages %#}
                 <div class="item">
                     <div class="linebox"></div>
                     <h3>{{group}}</h3>
@@ -102,7 +100,7 @@
             {%endif%}
             {% if (qualifications)|length > 0 %}
             <div class="linebox"></div>
-            <h2 id="qualifications">qualifications</h2>
+            <h2 id="qualifications">Qualifications</h2>
             <div class="block">
                 {%for qual in qualifications%}
                 <div>{{qual.issuer_short or qual.issuer}} {{qual.name}}</div>
