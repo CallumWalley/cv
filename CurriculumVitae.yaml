@@ -25,12 +25,12 @@ basics:
     url: https://github.com/CallumWalley
 work:
 - name: NeSI
-  nameLong: New Zealand eScience Infrastructure
+  name_long: New Zealand eScience Infrastructure
   position: Applications Support Specialist
   url: https://support.nesi.org.nz/hc/en-gb
-  startDate: '2018'
-  endDate: Current
-  summary: Support
+  start_date: '2018'
+  end_date: Current
+  description: Support
   highlights:
   - Training
   - Documentation
@@ -38,18 +38,18 @@ work:
 - name: Tycho
   position: Sole Employee
   url: https://company.com
-  startDate: '2018'
-  endDate: Current
-  summary: Engineering Design
+  start_date: '2018'
+  end_date: Current
+  description: Engineering Design
   highlights:
   - Engineering CAD
   - Primarily Long Term Clients
 - name: AUT
   position: Research Assistant
   url: ''
-  startDate: '2016'
-  endDate: '2017'
-  summary: Description…
+  start_date: '2016'
+  end_date: '2017'
+  description: 
   highlights:
   - UAV Controller Design
   - IMU Filters
@@ -58,8 +58,8 @@ work:
   name: White Star Products
   position: Trainee Engineer
   url: https://swageturn.com/
-  startDate: '2017'
-  endDate: '2018'
+  start_date: '2017'
+  end_date: '2018'
   summary: ''
   highlights:
   - Built <a href="www.swageturn.co.nz">www.swageturn.co.nz</a>
@@ -69,34 +69,33 @@ work:
   - Engineering Advice
 volunteer:
 - name: ARHT
-  organizationLong: Auckland Rescue Helicopter Trust
+  name_long: Auckland Rescue Helicopter Trust
   position: Simulator Instructor
   url: ''
-  startDate: '2013'
-  endDate: '2021'
-  summary: ''
+  start_date: '2013'
+  end_date: '2021'
+  description: ''
   highlights:
   - Represented Volanteers at 2014 Royal Reception.
 education:
 - slug: macleans
-  institution: Macleans Collage
-  startDate: '2006'
-  endDate: '2012'
+  name: Macleans Collage
+  start_date: '2006'
+  end_date: '2012'
   highlights: 
   - Service Prefect
   - Distiction in Computer Science
   - IGCSE A Levels
 - slug: aut
-  institution: AUT University
-  institutionLong: Auckland University of Technology University
+  name: AUT University
+  name_long: Auckland University of Technology University
   url: ''
-  area: Mechanical Engineering
-  studyType: Honors
-  startDate: '2013'
-  endDate: '2017'
+  position: Mechanical Engineering (Honors)
+  start_date: '2013'
+  end_date: '2017'
 awards:
 - slug: 'kinvig'
-  title: 'Kinvig Scholarship'
+  name: 'Kinvig Scholarship'
   awarder: 'Scouts New Zealand'
 qualifications:
 - slug: swc-instructor
@@ -166,7 +165,7 @@ skills:
   - Workshops at Resbaz 2019-2022
   - Workshops at eRNZ 2021, 2022
   - Workshops at NZRSE 2020, 2022
- - slug: docs
+- slug: docs
   name: Information Architecture
   description: Similar to training, I find organising information in a way that is
     easy to find, intuative and digestable.
@@ -212,6 +211,7 @@ skills:
 - slug: hpc
   name: High Performance Computing
   description: ''
+  highlights:
   - Bash
   - Module software stack
   - Scheduler (SLURM)
@@ -317,8 +317,8 @@ projects:
   highlights:
   highlights:
   - HTML
-  startDate: ''
-  endDate: ''
+  start_date: ''
+  end_date: ''
   url: ''
   roles: ''
   entity: ''

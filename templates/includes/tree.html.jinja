@@ -1,0 +1,29 @@
+{% if items|length > 0 %}
+<h2 id="{{title}}">{{title|title}}</h2>
+<div class="block">
+    {% for item in items %}
+    <div class="item">
+        <div class="comp comp__header">
+            <h3>{{item.name}}</h3>
+            <div class="yearrange">{{item.startDate}}&#8211;{{item.endDate}}</div>
+        </div>
+        <div class="comp comp__body">
+            <i class=" comp comp__icon material-icons">
+                alternate_email
+            </i>
+            <div class="comp comp--flexcol">
+                <em>{{item.position}}</em>
+                <p>{{item.summary}}</p>
+                {% if item.highlights | length > 0 %}
+                <ul>
+                    {% for hl in item.highlights %}
+                    <li>{{hl}}</li>li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
