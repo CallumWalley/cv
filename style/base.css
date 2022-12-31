@@ -32,14 +32,12 @@ h2 {
 h2::before {
     border-bottom-color: orange;
     border-bottom-style: solid;
-    width: 1em;
-    height: 1em;
+    width: 0.5em;
+    height: 0.5em;
     display: inline-block;
     content: " ";
     /* position: absolute; */
-
 }
-
 
 h3 {
     font-size: 100%;
@@ -49,8 +47,8 @@ h3 {
 h3::before {
     border-bottom-color: orange;
     border-bottom-style: solid;
-    width: 1em;
-    height: 1em;
+    width: 0.5em;
+    height: 0.5em;
     display: inline-block;
     content: " ";
 }
@@ -90,6 +88,10 @@ strong {
     display: none;
 }
 
+.comp__body {
+    margin-left: 0.5em
+}
+
 .comp--flexcol {
     flex-direction: column;
 }
@@ -104,7 +106,7 @@ strong {
     color: grey;
     place-self: flex-end;
     white-space: nowrap;
-    margin-left: 1em;
+    margin: 16px;
 }
 
 .onelineitem {
@@ -113,24 +115,11 @@ strong {
     page-break-inside: avoid;
 }
 
-.linebox {
-    border-bottom-color: orange;
-    border-bottom-style: solid;
-    width: 15px;
-    height: 1.5em;
-    position: absolute;
-}
-
 #name {
     page-break-after: avoid;
     font-size: 20pt;
     font-weight: 500;
     margin-bottom: 0px;
-}
-
-.tt {
-    font-family: "Courier New", Courier, monospace;
-    font-weight: 600;
 }
 
 .row {
