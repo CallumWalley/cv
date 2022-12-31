@@ -35,7 +35,10 @@ h2::before {
     border-bottom-style: solid;
     width: 1em;
     height: 1em;
-    position: absolute;
+    display: inline-block;
+    content: "-";
+    /* position: absolute; */
+
 }
 
 
