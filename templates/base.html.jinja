@@ -18,8 +18,11 @@
                 {% for item in education %}
                 <div class="item">
                     <div class="comp comp__header">
-                        <div class="yearrange">{{item.startDate}}&#8211;{{item.endDate}}</div>
+                        <div class="linebox"></div>
                         <h3> {{item.institution}} </h3>
+                        <div class="yearrange">{{item.startDate}}&#8211;{{item.endDate}}</div>
+                    </div>
+                    <div class="comp comp__body">
                         <em>{{item.area}}-{{item.studyType}}</em>
                     </div>
                 </div>
@@ -33,8 +36,9 @@
                 {% for item in ((work + volunteer) | sort(attribute='startDate')) %}
                 <div class="item">
                     <div class="comp comp__header">
-                        <div class="yearrange">{{item.startDate}}&#8211;{{item.endDate}}</div>
+                        <div class="linebox"></div>
                         <h3>{{item.name}}</h3>
+                        <div class="yearrange">{{item.startDate}}&#8211;{{item.endDate}}</div>
                     </div>
                     <div class="comp comp__body">
                         <i class=" comp comp__icon material-icons">
@@ -62,7 +66,10 @@
             <div class="block">
                 {% for item in skills %}
                 <div class="item">
-                    <h3 class="comp comp__header">{{item.name}}</h3>
+                    <div class="comp comp__header">
+                        <div class="linebox"></div>
+                        <h3 class="comp comp__header">{{item.name}}</h3>
+                    </div>
                     <div class="comp comp__body">
                         <i class=" comp comp__icon material-icons">
                             alternate_email
@@ -79,9 +86,15 @@
             <div class="linebox"></div>
             <h2 id="languages">languages</h2>
             <div class="block">
-                {%for lang in languages%}
-                <div>{{lang.language}}</div>
-                {%endfor%}
+                {% for group, items in languages|groupby("rating")) %}
+                <div class="item">
+                    <div class="linebox"></div>
+                    <h3>{{group}}</h3>
+                    {%for item in items %}
+                    <div>{{item.language}}</div>
+                    {%endfor%}
+                </div>
+                {% endfor %}
             </div>
             {%endif%}
             {% if (qualifications)|length > 0 %}

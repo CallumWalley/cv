@@ -204,38 +204,49 @@ languages:
   language: C/C++/C#
   experience: 'Experience with research software, as well as application development.'
   keywords: []
+  rating: Competent
 - slug: js
   language: JavaScript
   experience: Node and frontend.
   keywords: []
+  rating: Competent
 - slug: web
   language: HTML/CSS
   experience: Still prefer making websites from scratch.
   keywords: []
+  rating: Familiar
 - language: PHP
   experience: Unfortunately. Extensive customisation of wordpress template for large online store.
   keywords: []
+  rating: Familiar
 - language: Python
   experience: 'My go-to language for most things. Scientific programming, apps, webservices'
   keywords: []
+  rating: Competent
 - language: MATLAB
   experience: ''
   keywords: []
+  rating: Competent
 - language: Bash
   experience: I bash everything
   keywords: []
+  rating: Competent
 - language: Fortran
   experience: Fundementals only. Some work with user defined algorithems in engineering apps.
   keywords: []
+  rating: Familiar
 - language: LUA
   experience: Writing custom module files, and pandoc filters.
   keywords: []
+  rating: Familiar
 - language: TCL
   experience: Writing custom module files, and some engineering applications.
   keywords: []
+  rating: Familiar
 - language: VBA
   experience: Shamefully
   keywords: []
+  rating: Familiar
 interests:
 - name: Hiking
   keywords: []
