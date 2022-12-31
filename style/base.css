@@ -27,7 +27,6 @@ h2 {
     font-size: 120%;
     font-weight: 600;
     page-break-after: avoid;
-    margin: 0.7em 0em 0em 1em;
 }
 
 h2::before {
@@ -36,7 +35,7 @@ h2::before {
     width: 1em;
     height: 1em;
     display: inline-block;
-    content: "-";
+    content: " ";
     /* position: absolute; */
 
 }
@@ -45,7 +44,6 @@ h2::before {
 h3 {
     font-size: 100%;
     font-weight: 600;
-    margin: 0.7em 0em 0em 1em;
 }
 
 h3::before {
@@ -53,7 +51,8 @@ h3::before {
     border-bottom-style: solid;
     width: 1em;
     height: 1em;
-    position: absolute;
+    display: inline-block;
+    content: " ";
 }
 
 strong {
