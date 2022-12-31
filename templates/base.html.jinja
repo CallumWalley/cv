@@ -86,7 +86,7 @@
             <div class="linebox"></div>
             <h2 id="languages">languages</h2>
             <div class="block">
-                {% for group, items in languages|groupby("rating")) %}
+                {% for group, items in languages|groupby("rating") %}
                 <div class="item">
                     <div class="linebox"></div>
                     <h3>{{group}}</h3>
