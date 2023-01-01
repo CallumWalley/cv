@@ -17,6 +17,20 @@ VIBES_FILE = "vibes.yaml"
 TEMPLATES = "templates"
 
 
+def slugify(obj):
+    key_order = ["name", "organization", "institution", "title", "language"]
+
+    for item in obj:
+        if "slug" in item:
+            continue
+        else:
+            for key in key_order:
+                if key in d:
+                    return slugify(d[key])
+            else:
+                return slugify(str(d))
+
+
 def return_filtered(obj, filter_value):
     def get_slug(d):
         if isinstance(d, tuple):
