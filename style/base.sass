@@ -30,7 +30,7 @@ h2
 
 h2::before,
 h3::before
-    border-bottom: 2px solid $theme-primary
+    border-bottom: $theme-primary solid
     width: 0.5em
     height: 0.5em
     display: inline-block
@@ -52,7 +52,7 @@ strong
 .column
     width: 50%
     margin-left: 1em
-    border-left: 2px solid $theme-primary
+    border-left: $theme-primary solid
 
 ul
     margin: 0
@@ -63,20 +63,20 @@ li
 .block
     margin: 0
     margin-left: 2em
-    border-left: 2px solid $theme-primary
+    border-left: $theme-primary solid
 
 .item
     page-break-inside: avoid
 
 .comp
     display: flex
-    margin: 0
+    margin: 0 0 0 0
 
     &__icon
         display: none
 
     &__body
-        margin-left: 0.5em
+        margin-left: 1.5em
 
     &--flexcol
         flex-direction: column
@@ -85,6 +85,8 @@ li
     font-style: italic
     color: grey
     white-space: nowrap
+    margin-left: 0.5em
+    font-size: 90%
 
 p
     margin: 0

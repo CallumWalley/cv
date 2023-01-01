@@ -25,23 +25,29 @@
             {% if (languages)|length > 0 %}
             <div class="block">
                 <h2 id="languages">Languages</h2>
-
                 {% for group, items in languages|groupby(attribute="rating", default="It's complicated") %}
                 <div class="item">
-                    <h3>{{group}}</h3>
+                    <div class="comp comp__header">
+                        <h3>{{group}}</h3>
+                    </div>
                     {%for item in items %}
-                    <div class="comp">{{item.language}}</div>
+                    <div class="comp comp__body">
+                        <p>{{item.language}}</p>
+                    </div>
                     {%endfor%}
                 </div>
                 {% endfor %}
             </div>
             {%endif%}
             {% if (qualifications)|length > 0 %}
-            <h2 id="qualifications">Qualifications</h2>
             <div class="block">
-                {%for qual in qualifications%}
-                <div class="item">{{qual.issuer_short or qual.issuer}} {{qual.name}}</div>
-                {%endfor%}
+
+                <h2 id="qualifications">Qualifications</h2>
+                <div class="comp comp__body">
+                    {%for qual in qualifications%}
+                    <h3 class="item">{{qual.issuer_short or qual.issuer}} {{qual.name}}</h3>
+                    {%endfor%}
+                </div>
             </div>
             {%endif%}
         </div>
