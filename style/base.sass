@@ -1,3 +1,9 @@
+$theme-primary: "orange"
+$theme-secondry: "black"
+
+*
+    color: darkslategrey
+
 @page
     size: 21cm 29.7cm
     margin: 30mm 45mm 30mm 45mm
@@ -13,9 +19,8 @@ body
 h1
     font-size: 150%
     font-weight: 600
-    display: inline-block
     margin-top: 8px
-    margin-bottom: 0px
+    margin-bottom: 0
 
 h2
     font-size: 120%
@@ -23,9 +28,9 @@ h2
     page-break-after: avoid
     margin: 0
 
-h2::before
-    border-bottom-color: orange
-    border-bottom-style: solid
+h2::before,
+h3::before
+    border-bottom: 2px solid $theme-primary
     width: 0.5em
     height: 0.5em
     display: inline-block
@@ -38,21 +43,8 @@ h3
     font-weight: 600
     margin: 0
 
-h3::before
-    border-bottom-color: orange
-    border-bottom-style: solid
-    width: 0.5em
-    height: 0.5em
-    display: inline-block
-    content: " "
-    margin-right: 0.5em
-
 strong
     font-weight: 600
-    color: darkslategrey
-
-em
-    color: darkslategrey
 
 .main
     display: flex
@@ -60,21 +52,18 @@ em
 .column
     width: 50%
     margin-left: 1em
-    border-left-color: orange
-    border-left-style: solid
+    border-left: 2px solid $theme-primary
 
 ul
     margin: 0
 
 li
     margin: 0
-    color: darkslategrey
 
 .block
     margin: 0
     margin-left: 2em
-    border-left-color: orange
-    border-left-style: solid
+    border-left: 2px solid $theme-primary
 
 .item
     page-break-inside: avoid
@@ -98,7 +87,6 @@ li
     white-space: nowrap
 
 p
-    color: darkslategrey
     margin: 0
 
 .vline
