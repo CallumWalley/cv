@@ -98,7 +98,7 @@ def html2pdf(html, pdf_path):
         "margin-left": "0.75in",
         "encoding": "UTF-8",
         "enable-local-file-access": True,
-        "user-style-sheet": "formatting/base.css",
+        "user-style-sheet": "style/base.css",
     }
     pdfkit.from_string(html, pdf_path, options=options, verbose=True)
 

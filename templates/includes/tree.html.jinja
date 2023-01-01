@@ -23,7 +23,9 @@
                 {% if item.highlights | length > 0 %}
                 <ul>
                     {% for hl in item.highlights %}
-                    <li>{{hl}}</li>
+                    <li>
+                        {{hl}}
+                    </li>
                     {% endfor %}
                 </ul>
                 {% endif %}

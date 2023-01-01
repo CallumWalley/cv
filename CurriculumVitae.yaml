@@ -191,7 +191,6 @@ skills:
   description: ''
   highlights:
   - CI/CD
-
 - name: Data Science
   description: 'Whatever this means to you, I can do it.'
   highlights:
@@ -201,8 +200,9 @@ skills:
   - Machine Learning
   - Visualisation
 - name: Cloud Computing
-- description: ''
-- highlights:
+  slug: cloud
+  description: ''
+  highlights:
   - OpenStack
   - Azure
   - AWS

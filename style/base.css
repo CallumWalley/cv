@@ -3,13 +3,13 @@
     margin: 30mm 45mm 30mm 45mm;
 }
 
-/* Make A4 */
 body {
     font-family: 'Helvetica', 'Arial', sans-serif;
     font-weight: 300;
     font-style: normal;
     font-size: 12pt;
-    margin: 0 0 0 0;
+    margin: 0;
+    max-width: 49em;
 }
 
 h1 {
@@ -24,6 +24,7 @@ h2 {
     font-size: 120%;
     font-weight: 600;
     page-break-after: avoid;
+    margin: 0;
 }
 
 h2::before {
@@ -40,6 +41,7 @@ h2::before {
 h3 {
     font-size: 100%;
     font-weight: 600;
+    margin: 0;
 }
 
 h3::before {
@@ -54,6 +56,11 @@ h3::before {
 
 strong {
     font-weight: 600;
+    color: darkslategrey;
+}
+
+em {
+    color: darkslategrey;
 }
 
 .main {
@@ -67,20 +74,29 @@ strong {
     border-left-style: solid;
 }
 
+ul {
+    margin: 0;
+}
+
+li {
+    margin: 0;
+    color: darkslategrey;
+}
+
 .block {
+    margin: 0;
     margin-left: 2em;
     border-left-color: orange;
     border-left-style: solid;
 }
 
 .item {
-    margin-bottom: 0.5em;
-    display: table;
     page-break-inside: avoid;
 }
 
 .comp {
     display: flex;
+    margin: 0;
 }
 
 .comp__icon {
@@ -103,6 +119,7 @@ strong {
 
 p {
     color: darkslategrey;
+    margin: 0;
 }
 
 .vline {

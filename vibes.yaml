@@ -1,7 +1,5 @@
 - name: Research Software Engineer
   template: templates/base.html.jinja
-  css:
-  - style/base.css
   output:
   - docs/variants/rse.html
   - pdf/rse.pdf
