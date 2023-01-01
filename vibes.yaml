@@ -2,7 +2,7 @@
   template: templates/base.html.jinja
   output:
   - docs/variants/rse.html
-  - pdf/rse.pdf
+  # - pdf/rse.pdf
   overwrite:
   filter:
     True
