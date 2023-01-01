@@ -10,6 +10,7 @@ import pdfkit
 import yaml
 from slugify import slugify
 from pathlib import Path
+import sass
 
 CV_FILE = "CurriculumVitae.yaml"
 VIBES_FILE = "vibes.yaml"
@@ -62,7 +63,6 @@ def generate_vibe(vibe, cv):
 
     # Filter CV data.
     cv = return_filtered(cv, vibe["filter"])
-    print(cv)
     # always generate html.
     template_path = os.path.abspath(vibe["template"])
 
@@ -89,6 +89,10 @@ def generate_vibe(vibe, cv):
     return
 
 
+def generate_css():
+    sass.compile(dirname=("style", "docs"), output_style="compressed")
+
+
 def html2pdf(html, pdf_path):
     options = {
         "page-size": "Letter",
@@ -111,7 +115,7 @@ if __name__ == "__main__":
     for vibe in vibes:
         generate_vibe(vibe, cv)
 
-
+    generate_css()
 # def load_data(json_glob):
 #     def _ordinal_day(e):
 #         return -datetime.date(
