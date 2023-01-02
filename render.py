@@ -70,7 +70,8 @@ def load_json_yaml(path):
 def generate_vibe(vibe, cv):
 
     # Filter CV data.
-    cv = return_filtered(cv, vibe["filter"])
+    if "filter" in vibe:
+        cv = return_filtered(cv, vibe["filter"])
     print(cv)
     # always generate html.
     template_path = os.path.abspath(vibe["template"])
