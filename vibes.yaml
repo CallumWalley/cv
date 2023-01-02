@@ -1,3 +1,7 @@
+- name: all
+  template: templates/base.html.jinja
+  output:
+  - docs/variants/all.html
 - name: Research Software Engineer
   template: templates/base.html.jinja
   output:
@@ -33,10 +37,10 @@
     work: True
     volunteer: True
     skills: 
-    - rse
+    - training
+    - docs
     - data-science
     - cloud
-    - hpc
     languages:
     - c
     - cs
@@ -45,3 +49,4 @@
     - fortran
     - matlab
     - sql
+    qualifications: swc

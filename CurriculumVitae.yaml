@@ -156,8 +156,8 @@ qualifications:
   url: 
 skills:
 - name: Training
-  description: Development of training materials, organisation and delivery of workshops,
-    webinars.
+  description: I am experienced with material development, as well as organisation and delivery of workshops,
+    webinars, etc.
   highlights:
   - Software Carpentry Instructor
   - Quarterly 'Introduction to HPC'
@@ -167,19 +167,19 @@ skills:
 - slug: docs
   name: Information Architecture
   description: I enjoy organising information in a way that is
-    accessible, intuitive and easy to understand.
+    accessible, intuitive and maintainable.
   highlights:
   - mkdocs
   - Training material
 - slug: cad
   name: Engineering CAD
-  description: ''
+  description: 'I am a qualified Engineer with years of experience.'
   highlights:
   - Solidworks
   - CadQuery
 - slug: rse
   name: Scientific Programming
-  description: ''
+  description: 'I have worked closely with researchers to help improve their code, and upskill.'
   highlights:
   - Reproducability
   - Workflow Design
@@ -200,7 +200,7 @@ skills:
   - Visualisation
 - name: Cloud Computing
   slug: cloud
-  description: ''
+  description: 'I am familiar with using all the major cloud service providers, and have a firm understanding of core concepts.'
   highlights:
   - OpenStack
   - Azure
@@ -209,15 +209,16 @@ skills:
   - Containers
 - slug: hpc
   name: High Performance Computing
-  description: ''
+  description: 'I have supported and maintained a wide range of HPC services.'
   highlights:
   - Bash
   - Module software stack
   - Scheduler (SLURM)
   - Containers
+  - Visualisation 
 - slug: design
   name: Digital Design
-  description: ''
+  description: 'Is My Passion'
   highlights:
   - Adobe Suite
   - GIMP
@@ -227,7 +228,7 @@ skills:
   - LaTex
 - slug: webdev
   name: Web Development
-  description: ''
+  description: 'Full Stack'
   highlights:
   - NodeJS
   - Djanjo
@@ -256,7 +257,7 @@ languages:
   highlights: []
   rating: Familiar
 - language: PHP
-  experience: Unfortunately. Extensive customisation of wordpress template for large online store
+  experience: Extensive customisation of wordpress template for large online store
   highlights: []
   rating: Familiar
 - language: Python
@@ -316,7 +317,9 @@ references:
     email: blair.bethwaite@nesi.org.nz
     blood-sacrifice: not a real contact method
 projects:
-- name: ''
+- name: 'AscTec Pelican Controller Design'
+- name: 'Whatever I did with that IMU thingy'
+- name: 'Swageturn Website'
   description: ''
   highlights:
   highlights:
@@ -327,3 +330,13 @@ projects:
   roles: ''
   entity: ''
   type: ''
+- name: 'VDT'
+- name: 'Introduction to High Performance Computing'
+- name: 'High Performance Computing Workflows'
+- name: 'NeSI Support Documentation'
+- name: 'RStudio Server with Jupyter'
+- name: 'Introduction to Singularity'
+- name: 'Docs 2.0 ;)'
+
+
+
