@@ -28,24 +28,32 @@ def ensluginate(obj):
             for key in key_order:
                 if key in item:
                     item["slug"] = slugify(item[key])
-                    continue
+                    break
 
 
-def return_filtered(obj, filter_value):   
+def return_filtered(obj, filter_value):
+
     if isinstance(filter_value, bool):
         # If true, return all unmodified.
-        return obj if filter_value else []
-    elif isinstance(filter_value, (tuple, list, set)):
-        return (
-            dict(filter(lambda x: (x["slug"] in filter_value), obj.items()))
-            if isinstance(obj, dict)  # Unpack if dict
-            else list(filter(lambda x: (x["slug"] in filter_value), obj))
-        )
+        filtered = obj if filter_value else []
+
+    elif isinstance(filter_value, dict):
+        filtered = {}
+        for key, value in filter_value.items():
+            if key in obj.keys():
+                filtered[key] = return_filtered(obj[key], value)
+            else:
+                print(f"Could not find anything called '{key}'")
     else:
-        return {
-            key: return_filtered(obj[key], value) if key in obj else []
-            for key, value in filter_value.items()
-        }
+        filtered = []
+        for filter in filter_value:
+            for item in obj:
+                if item["slug"] == filter:
+                    filtered.append(item)
+                    break
+            else:
+                print(f"Could not find anything called '{filter}'")
+    return filtered
 
 
 def load_json_yaml(path):

@@ -1,0 +1,9 @@
+# TODO
+
+- Fuzzy string suggestions if key misplelled
+- Better way of representing a filter in yaml
+- Properly sort out css/template mess
+- Serve local properly
+- Overwrite theme variables from vibe
+- Better index.html (dynamic? switch between variants)
+- Proper interactive representation of cv (like old website.)

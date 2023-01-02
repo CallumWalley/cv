@@ -14,7 +14,7 @@
             {% set items=(education | sort(attribute='startDate')) %}
             {% set title="Education" %}
             {% include "includes/tree.html.jinja" %}
-            {% set items=((work + volunteer) | sort(attribute='startDate')) %}
+            {% set items=(((work or []) + (volunteer or [])) | sort(attribute='startDate')) %}
             {% set title="Employment" %}
             {% include "includes/tree.html.jinja" %}
         </div>
