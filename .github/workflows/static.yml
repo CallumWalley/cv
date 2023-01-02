@@ -48,8 +48,6 @@ jobs:
           git add --all
           git commit -m "Outpus of render.py" 
           git push -f origin main
-      - name: Move assets
-        run: mv style/* docs
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact

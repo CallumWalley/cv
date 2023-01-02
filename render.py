@@ -31,17 +31,15 @@ def ensluginate(obj):
                     continue
 
 
-def return_filtered(obj, filter_value):
-
-    
+def return_filtered(obj, filter_value):   
     if isinstance(filter_value, bool):
         # If true, return all unmodified.
         return obj if filter_value else []
     elif isinstance(filter_value, (tuple, list, set)):
         return (
-            dict(filter(lambda x: (get_slug(x) in filter_value), obj.items()))
+            dict(filter(lambda x: (x["slug"] in filter_value), obj.items()))
             if isinstance(obj, dict)  # Unpack if dict
-            else list(filter(lambda x: (get_slug(x) in filter_value), obj))
+            else list(filter(lambda x: (x["slug"] in filter_value), obj))
         )
     else:
         return {
