@@ -5,4 +5,43 @@
   # - pdf/rse.pdf
   overwrite:
   filter:
-    True
+    education: 
+    - aut
+    work: True
+    volanteering: True
+    skills: 
+    - rse
+    - data-science
+    - cloud
+    - hpc
+    languages:
+    - c
+    - cs
+    - python
+    - js
+    - fortran
+    - matlab
+    - sql
+- name: Training
+  template: templates/base.html.jinja
+  output:
+  - docs/variants/web.html
+  # - pdf/rse.pdf
+  filter:
+    education: 
+    - aut
+    work: True
+    volanteering: True
+    skills: 
+    - rse
+    - data-science
+    - cloud
+    - hpc
+    languages:
+    - c
+    - cs
+    - python
+    - js
+    - fortran
+    - matlab
+    - sql

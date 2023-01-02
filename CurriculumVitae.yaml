@@ -156,22 +156,21 @@ qualifications:
   url: 
 skills:
 - name: Training
-  description: I find training very fulfilling. I have been significantly involved
-    in development of training materials, organisation and delivery of workshops,
-    webinars, etc
+  description: Development of training materials, organisation and delivery of workshops,
+    webinars.
   highlights:
   - Software Carpentry Instructor
-  - Webinars
+  - Quarterly 'Introduction to HPC'
   - Workshops at Resbaz 2019-2022
   - Workshops at eRNZ 2021, 2022
   - Workshops at NZRSE 2020, 2022
 - slug: docs
   name: Information Architecture
-  description: Similar to training, I find organising information in a way that is
-    easy to find, intuative and digestable.
+  description: I enjoy organising information in a way that is
+    accessible, intuitive and easy to understand.
   highlights:
   - mkdocs
-  - Software Carpentary
+  - Training material
 - slug: cad
   name: Engineering CAD
   description: ''
@@ -237,7 +236,12 @@ skills:
   - Static
 languages:
 - slug: c
-  language: C/C++/C#
+  language: C/C++
+  experience: Research Software Development
+  highlights: []
+  rating: Competent
+- slug: cs
+  language: C#
   experience: Research Software Development
   highlights: []
   rating: Competent

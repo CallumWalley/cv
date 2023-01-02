@@ -18,6 +18,7 @@ TEMPLATES = "templates"
 
 
 def ensluginate(obj):
+    # Add nice slug to all items.
     # Order in which to use key as slug.
     key_order = ["slug", "name", "organization", "institution", "title", "language"]
     for category in obj.values():
@@ -32,7 +33,7 @@ def ensluginate(obj):
 
 def return_filtered(obj, filter_value):
 
-    ensluginate(obj)
+    
     if isinstance(filter_value, bool):
         # If true, return all unmodified.
         return obj if filter_value else []
@@ -112,6 +113,8 @@ if __name__ == "__main__":
 
     cv = load_json_yaml(CV_FILE)
     vibes = load_json_yaml(VIBES_FILE)
+
+    ensluginate(cv)
 
     for vibe in vibes:
         generate_vibe(vibe, cv)
