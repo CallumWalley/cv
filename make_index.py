@@ -23,6 +23,7 @@ if __name__ == "__main__":
     jinja_env = jinja2.environment.Environment(
         loader=jinja2.FileSystemLoader(Path(INDEX_TEMPLATE).parent)
     )
+    jinja_env.filters["relpath"] = lambda a, b: Path(a).relative_to(Path(b))
 
     template = jinja_env.get_template(INDEX_TEMPLATE)
 

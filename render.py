@@ -66,6 +66,12 @@ def load_json_yaml(path):
         else:
             raise Exception(f"'{path}' doesn't look like yaml or json.")
 
+def make_index():
+    template = jinja_env.get_template(INDEX_TEMPLATE)
+
+    html = template.render({"vibes": vibes})
+    with open("docs/index.html", "w+") as f:
+        f.write(html)
 
 def generate_vibe(vibe, cv):
 
