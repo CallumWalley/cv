@@ -63,6 +63,7 @@ def generate_vibe(vibe, cv):
 
     # Filter CV data.
     cv = return_filtered(cv, vibe["filter"])
+    print(cv)
     # always generate html.
     template_path = os.path.abspath(vibe["template"])
 
