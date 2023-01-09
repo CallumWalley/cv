@@ -2,9 +2,10 @@
 basics:
   name: Callum M Walley
   label: Engineer
-  image: ''
-  email: callumnmw@gmail.com
-  phone: '02102703104'
+  image: 'img/cmw.png'
+  contact:
+    email: callumnmw@gmail.com
+    phone: '02102703104'
   url: ''
   summary: ''
   location:
@@ -14,15 +15,19 @@ basics:
   - network: Twitter
     username: calw
     url: https://twitter.com/calw
+    favicon: ""
   - network: GitHub
     username: CallumWalley
     url: https://github.com/CallumWalley
+    favicon: ""
   - network: LinkedIn
     username: callum-macdonald-walley-227339142
     url: https://www.linkedin.com/in/callum-macdonald-walley-227339142/
+    favicon: ""
   - network: tycho
     username: CallumWalley
     url: https://github.com/CallumWalley
+    favicon: ""
 work:
 - name: NeSI
   name_long: New Zealand eScience Infrastructure
