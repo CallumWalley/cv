@@ -9,10 +9,11 @@
   # - pdf/rse.pdf
   overwrite:
   filter:
+    basics: True
     education: 
     - aut
     work: True
-    volanteering: True
+    volunteer: True
     skills: 
     - rse
     - data-science
@@ -32,6 +33,7 @@
   - docs/variants/web.html
   # - pdf/rse.pdf
   filter:
+    basics: True
     education: 
     - aut
     work: True
@@ -49,4 +51,4 @@
     - fortran
     - matlab
     - sql
-    qualifications: swc
+    qualifications: ["swc"]

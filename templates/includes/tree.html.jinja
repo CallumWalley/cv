@@ -1,19 +1,19 @@
 {% if items|length > 0 %}
-<h2 id="{{title}}">{{title|title}}</h2>
-<div class="block">
+<div class="leaf tree">
+<h2 class="stub" id="{{title}}">{{title|title}}</h2>
     {% for item in items %}
-    <div class="item">
-        <div class="comp comp__header">
+    <div class="leaf">
+        <div class="flex flex__header stub">
             <h3>{{item.name}}</h3>
             {% if item.start_date %}
             <div class="yearrange">{{item.start_date}}&#8211;{{item.end_date}}</div>
             {% endif %}
         </div>
-        <div class="comp comp__body">
-            <i class=" comp comp__icon material-icons">
+        <div class="flex flex__body">
+            <i class=" flex icon material-icons">
                 alternate_email
             </i>
-            <div class="comp comp--flexcol">
+            <div class="flex flex--col">
                 {% if item.position %}
                 <em>{{item.position}}</em>
                 {%endif%}

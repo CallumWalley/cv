@@ -23,8 +23,10 @@
         window.onload = () => { document.getElementById("cv").src = vibes[current_url].url }
     </script>
 </head>
+<body format="background: #f3f3f3">
 <div style="display:flex;position:absolute;justify-content:space-between;width:100%;">
     <input id="clickMe" type="button" value="Previous CV" onclick="previousVibe();" />
     <input id="clickMe" type="button" value="Next CV" onclick="nextVibe();" />
 </div>
-<iframe id="cv" style="display:block;margin:auto;width:21cm;height:29cm"></iframe>
+</body>
+<iframe scrolling=no id="cv" style="display:block;margin:auto;width:21cm;height:29cm;border:none;box-shadow:1em 1em 20px 0px;"></iframe>

@@ -7,9 +7,11 @@
 </head>
 
 <body>
-    <h1 id="name"></h1> &nbsp; <span class="docname">Curriculum Vit&aelig;</span>
+    <h1  format="" id="name"></h1> &nbsp; <span class="docname">Curriculum Vit&aelig;</span>
     <div class="vline"></div>
-    <div class="main">
+    {% include "includes/basics.html.jinja" %}
+    <div class="vline"></div>
+    <div class="flex">
         <div class="column column--left">
             {% set items=(education | sort(attribute='startDate')) %}
             {% set title="Education" %}
@@ -23,15 +25,15 @@
             {% set title="Skills" %}
             {% include "includes/tree.html.jinja" %}
             {% if (languages)|length > 0 %}
-            <div class="block">
-                <h2 id="languages">Languages</h2>
-                {% for group, items in languages|groupby(attribute="rating", default="It's complicated") %}
+            <div class="tree">
+                <h2 class="stub" id="languages">Languages</h2>
+                {% for group, items in languages|groupby(attribute="rating", default="It's flexlicated") %}
                 <div class="item">
-                    <div class="comp comp__header">
+                    <div class="flex flex__header">
                         <h3>{{group}}</h3>
                     </div>
                     {%for item in items %}
-                    <div class="comp comp__body">
+                    <div class="flex flex__body">
                         <p>{{item.language}}</p>
                     </div>
                     {%endfor%}
@@ -40,8 +42,8 @@
             </div>
             {%endif%}
             {% if (qualifications)|length > 0 %}
-            <div class="block">
-                <h2 id="qualifications">Qualifications</h2>
+            <div class="tree">
+                <h2 class="stub" id="qualifications">Qualifications</h2>
                 {%for qual in qualifications%}
                 <h3 class="item">{{qual.issuer_short or qual.issuer}} {{qual.name}}</h3>
                 {%endfor%}
@@ -49,7 +51,7 @@
             {%endif%}
         </div>
     </div>
-    <div class="block" style="display: none;">
+    <div class="tree" style="display: none;">
         {% for reference in references %}
         <div class="onelineitem">
             {% include "includes/reference_card.html.jinja" %}

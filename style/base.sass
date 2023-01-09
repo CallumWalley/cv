@@ -5,15 +5,21 @@ $theme-secondry: #333333
     color: darkslategrey
 
 @page
+    background: white
     size: 21cm 29.7cm
     margin: 30mm 45mm 30mm 45mm
+
+#portrait
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)
+    position: absolute
+    width: 15%
 
 body
     font-family: 'Helvetica', 'Arial', sans-serif
     font-weight: 300
     font-style: normal
     font-size: 12pt
-    margin: 0
+    margin: 5px
     max-width: 49em
 
 h1
@@ -28,61 +34,72 @@ h2
     page-break-after: avoid
     margin: 0
 
-h2::before,
-h3::before
+h3
+    font-size: 100%
+    font-weight: 600
+    margin: 0
+// h2::before,
+// h3::before
+
+.stub
+    margin-left: 1em
+.stub::before
     border-bottom: $theme-primary solid
     width: 0.5em
     height: 0.5em
     display: inline-block
     content: " "
     margin-right: 0.5em
-    /* position: absolute; */
-
-h3
-    font-size: 100%
-    font-weight: 600
-    margin: 0
+    margin-left: -1em // I have no idea why this needs to be here
+    // The pseudo element gets the 'margin-left:1em' from for some reason.
+    position: absolute // To escape flex flow.
 
 strong
     font-weight: 600
 
-.main
-    display: flex
-
 .column
     width: 50%
-    margin-left: 1em
-    border-left: $theme-primary solid
-
+    // margin-left: 1em
+    // border-left: $theme-primary solid
 ul
     margin: 0
-    padding-left: 1.5em;
+    padding-left: 1.5em
 
 li
     margin: 0
 
-.block
+.tree
+    // display: flex
+
+.leaf 
     margin: 0
-    margin-left: 2em
     border-left: $theme-primary solid
 
-.item
-    page-break-inside: avoid
+.leaf > :not(.stub)
+    margin-left: 2em
 
-.comp
+.leaf:last-of-type 
+    border-left: none
+
+.leaf:last-of-type::before
+    height: 0.7em
+    border-left: $theme-primary solid
+    position: absolute
+    content: " "
+
+.flex
     display: flex
-    margin: 0 0 0 0
-    justify-content: space-between;
-    padding: 0 1em 0 0;
-
-    &__icon
-        display: none
+    justify-content: space-between
+    padding: 0 1em 0 0
 
     &__body
         margin-left: 1.5em
 
-    &--flexcol
+    &--col
         flex-direction: column
+
+.icon
+    display: none
 
 .yearrange
     font-style: italic
@@ -96,8 +113,8 @@ p
 
 .vline
     width: 100%
-    height: 1px
-    background-color: #000
+    height: 2px
+    background-color: $theme-primary
 
 @media print
     body
