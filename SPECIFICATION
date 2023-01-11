@@ -1,0 +1,46 @@
+# Specification
+
+## Theme file
+
+Directory containing the following:
+
+### `theme.yaml`
+
+A yaml file with the following parameters:
+    `env`: Jinja base enviroment. All templates (including base) must be in this directory. Can be `.`.
+    `base`: Template to use.
+    `include` (optional): An include directory. 
+
+### Base Template
+
+Must have at least one jinja file, should make use of parameters specified in cv file.
+All includes should be relative to the specified `include` directory.
+This should be named in `base`.
+Does not have to be full path, so long as it is in `env` file name is enough.
+
+### Includes
+
+A directory containing all other asset required for build.
+All assets will be copied to destination.
+Nest assets within directory "name-of-template" to avoid includes from one template being overwritten by another.
+Any `.scss` or `.sass` files will be compiled into the destination directory as correspondingly named `.css` file.
+
+e.g.
+
+```tree
+my-theme/
+├── theme.yaml
+├── includes/
+│   ├── img/
+│   │   └── img1.png
+│   └── style/
+│       └── main.sass
+└── templates/
+    ├── main.html.jinja
+    └── header.html.jinja
+```
+
+## CV file
+
+Broady follows https://jsonresume.org/.
+TODO: Document differences.

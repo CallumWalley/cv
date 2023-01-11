@@ -65,11 +65,7 @@ def kw_overwrite(obj, overwrite_values):
         return obj
     else:
         return overwrite_values
-
-
-
-        
-
+      
 def html2pdf(html, pdf_path):
     """Attempts to render html to pdf"""
     options = {
@@ -100,10 +96,19 @@ def copy_or_render(source, dest):
             shutil.copy(file, destination)
 
 class CurriculumVitae:
+    """
+    Class representing a CV, with info fo all it's possible configs.
+    """
     def __init__(self, path):
+        """
+        Parameters
+        ----------
+        path : path to cv file. Can be yaml or json.
+        """
         self.cv = load_json_yaml(path)
+        self.__ensluginate()
 
-    def ensluginate(self):
+    def __ensluginate(self):
         # Add nice slug to all items.
         # Order in which to use key as slug.
         key_order = ["slug", "name", "organization", "institution", "title", "language"]
@@ -116,7 +121,33 @@ class CurriculumVitae:
                         item["slug"] = slugify(item[key])
                         break
 
-    def generate_vibe(self, theme, outputs, name="", overwrite=False, includes=False, mask=True):
+    def generate_vibe(self, theme, outputs, name="", includes=False, mask=True, overwrite=False):
+        """
+        Parameters
+        ----------
+        theme : str
+            Path to theme directory.
+        outputs : list
+            List of paths specifying what outputs you want. 
+            Currently supports '.html', '.pdf'.
+            Must include at least one output.
+            Build directory will be parent of first output.
+        name : str, optional
+            Does nothing.
+            (default is "")
+        includes : str, optional
+            Path to include directory. 
+            Any paths referenced in CV (or overwrites), must be relative to this directory.
+            (default is False)
+        mask : dict, optional
+            Determines what data is used to generate cv.
+            (default is True)
+            TODO: examples.
+        overwrite : dict, optional
+            A dictionary mirroring the CV file.
+            Any values specified here will overwrite CV values for this build only.
+            (default is False)
+        """
 
         if len(outputs) > 1:
             raise Exception("Must have at least one valid output")
