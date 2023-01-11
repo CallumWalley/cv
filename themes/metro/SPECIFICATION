@@ -1,8 +1,0 @@
-# Theme file
-
-Must include `theme.yaml` with the following parameters:
-    `env`: Jinja enviroment. All templates must be in here.
-    `base`: Template to use.
-    `include`: An include directory. All assets will be copied to destination.
-               Nest assets within directory "name-of-template" to avoid includes from one template being overwritten by another.
-               Any `.scss` or `.sass` files will be compiled into the destination directory as correspondingly named `.css` file
