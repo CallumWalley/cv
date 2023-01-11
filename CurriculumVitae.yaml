@@ -15,19 +15,24 @@ basics:
   - network: Twitter
     username: calw
     url: https://twitter.com/calw
-    favicon: ""
+    favicon: "https://twitter.com/favicon.ico"
+    fa_icon_class: "fa fa-twitter"
   - network: GitHub
     username: CallumWalley
     url: https://github.com/CallumWalley
-    favicon: ""
+    favicon: "https://github.com/favicon.ico"
+    fa_icon_class: "fa fa-github"
   - network: LinkedIn
     username: callum-macdonald-walley-227339142
     url: https://www.linkedin.com/in/callum-macdonald-walley-227339142/
-    favicon: ""
+    favicon: "https://www.linkedin.com/favicon.ico"
+    fa_icon_class: "fa fa-linkedin"
   - network: tycho
-    username: CallumWalley
-    url: https://github.com/CallumWalley
+    username: tycho.co.nz
+    url: https://tycho.co.nz
     favicon: ""
+    fa_icon_class: "fa-solid fa-moon"
+
 work:
 - name: NeSI
   name_long: New Zealand eScience Infrastructure
