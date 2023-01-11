@@ -1,8 +1,8 @@
-- theme: themes-metro
+- theme: theme-metro
   outputs:
   - docs/all.html
   includes: "includes"
-- theme: themes-metro
+- theme: theme-metro
   outputs:
   - docs/me.html
   includes: "includes"
@@ -29,7 +29,7 @@
     - fortran
     - matlab
     - sql
-- theme: themes-metro
+- theme: theme-metro
   outputs:
   - docs/rse.html
   # - pdf/rse.pdf
