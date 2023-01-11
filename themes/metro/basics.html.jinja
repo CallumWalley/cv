@@ -1,0 +1,33 @@
+<div id="basics" class="flex">
+    <div class="tree" format="width:15%">
+        <img id="portrait" src="/{{ basics.image }}" alt="so handsome and pretty">
+    </div>
+    <div class="tree">
+        <div class="flex">
+        <h2>{{ basics.name }}</h2> - <h2>{{ basics.label }}</h2>
+        </div>
+        <br>
+        <div class="flex">
+            <div>
+                {% for key, value in basics.location.items() %}
+                <div>{{value}}</div>
+                {% endfor %}
+            </div>
+            <div class="align-right">
+                {% for key, value in basics.contact.items() %}
+                <div>{{value}}</div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="vline"></div>
+        <div class="flex social">
+            {% for profiles in basics.profiles %}
+            <div class="flex">
+                <i class="{{ profiles.fa_icon_class }}"></i>
+                {# <img src="{{ profiles.favicon }}"> #}
+                <p href="{{ profiles.url }}">{{ profiles.username }} </p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

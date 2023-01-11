@@ -1,14 +1,16 @@
-- name: all
-  template: templates/base.html.jinja
-  output:
-  - docs/variants/all.html
-- name: Research Software Engineer
-  template: templates/base.html.jinja
-  output:
-  - docs/variants/rse.html
-  # - pdf/rse.pdf
-  overwrite:
-  filter:
+- theme: themes/metro
+  outputs:
+  - docs/all.html
+  includes: "includes"
+- theme: themes/metro
+  outputs:
+  - docs/me.html
+  includes: "includes"
+  overwrite: 
+    basics: 
+      label: "Mechanical Engineer"
+      image: 'img/rse.png'
+  mask:
     basics: True
     education: 
     - aut
@@ -27,12 +29,42 @@
     - fortran
     - matlab
     - sql
-- name: Training
-  template: templates/base.html.jinja
-  output:
-  - docs/variants/web.html
+- theme: themes/metro
+  outputs:
+  - docs/rse.html
   # - pdf/rse.pdf
-  filter:
+  includes: "includes"
+  overwrite: 
+    basics: 
+      label: "Research Software Engineer"
+      image: 'img/rse.png'
+  mask:
+    basics: True
+    education: 
+    - aut
+    work: True
+    volunteer: True
+    skills: 
+    - rse
+    - data-science
+    - cloud
+    - hpc
+    languages:
+    - c
+    - cs
+    - python
+    - js
+    - fortran
+    - matlab
+    - sql
+- includes: "includes"
+  theme: themes/metro
+  outputs:
+  - docs/web.html
+  overwrite: 
+    basics: 
+      label: "Cloud Farmer"
+  mask:
     basics: True
     education: 
     - aut
@@ -51,4 +83,5 @@
     - fortran
     - matlab
     - sql
-    qualifications: ["swc"]
+    qualifications: 
+    - "swc"

@@ -6,8 +6,8 @@
         var vibes = [
             {% for vibe in vibes %}     
         {# This assumes a lot of things badly -#}
-        {% set relpath = vibe.output[0].split('/') | last  -%}
-        { "url": "variants/{{ relpath }}", "name": "{{ vibe.name }}" },
+        {% set relpath = vibe.outputs[0].split('/') | last  -%}
+        { "url": "{{ relpath }}", "name": "{{ vibe.name }}" },
         {% endfor %}
             ]
 

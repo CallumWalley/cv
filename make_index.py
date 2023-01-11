@@ -8,7 +8,7 @@ import re
 import datetime
 import pdfkit
 import yaml
-from render import load_json_yaml
+from cvibes.cv import load_json_yaml
 from pathlib import Path
 
 

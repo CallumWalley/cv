@@ -1,5 +1,6 @@
+# CV
 
-**Idea**
+## Idea
 
 * JSON file should drive creation of CV.
 * Tag information for multiple variations. e.g.
@@ -16,3 +17,8 @@ Inspired somewhat by this
 * JSON resume <https://jsonresume.org/>
 
 Similar to <https://github.com/nikaro/resume-pycli>
+
+## operation
+
+Everythin ing 'include' will be copied into the 'docs' directory. If it is a scss file, it will be compiled int the appropriately named css file.
+`render.py` will currently do a few things.

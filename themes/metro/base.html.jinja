@@ -3,35 +3,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Curriculum Vitae</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../base.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"  rel="stylesheet">
+    <link href="/style/base.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
     <h1  format="" id="name"></h1> &nbsp; <span class="docname">Curriculum Vit&aelig;</span>
     <div class="vline"></div>
-    {% include "includes/basics.html.jinja" %}
+    {% include "basics.html.jinja" %}
     <div class="vline"></div>
     <div class="flex">
         <div class="column column--left">
             {% set items=(education | sort(attribute='startDate')) %}
             {% set title="Education" %}
-            {% include "includes/tree.html.jinja" %}
+            {% include "tree.html.jinja" %}
             {% set items=(((work or []) + (volunteer or [])) | sort(attribute='startDate')) %}
             {% set title="Employment" %}
-            {% include "includes/tree.html.jinja" %}
+            {% include "tree.html.jinja" %}
         </div>
         <div class="column column--right">
             {% set items=(skills) %}
             {% set title="Skills" %}
-            {% include "includes/tree.html.jinja" %}
+            {% include "tree.html.jinja" %}
             {% if (languages)|length > 0 %}
-            <div class="tree">
+            <div class="leaf">
                 <h2 class="stub" id="languages">Languages</h2>
                 {% for group, items in languages|groupby(attribute="rating", default="It's flexlicated") %}
-                <div class="item">
-                    <div class="flex flex__header">
-                        <h3>{{group}}</h3>
-                    </div>
+                <div class="leaf">
+                    <h3 class="stub">{{group}}</h3>
                     {%for item in items %}
                     <div class="flex flex__body">
                         <p>{{item.language}}</p>
@@ -42,10 +41,12 @@
             </div>
             {%endif%}
             {% if (qualifications)|length > 0 %}
-            <div class="tree">
+            <div class="leaf">
                 <h2 class="stub" id="qualifications">Qualifications</h2>
                 {%for qual in qualifications%}
-                <h3 class="item">{{qual.issuer_short or qual.issuer}} {{qual.name}}</h3>
+                <div class="leaf">
+                    <h3 class="stub">{{qual.issuer_short or qual.issuer}} {{qual.name}}</h3>
+                </div>
                 {%endfor%}
             </div>
             {%endif%}
@@ -54,7 +55,7 @@
     <div class="tree" style="display: none;">
         {% for reference in references %}
         <div class="onelineitem">
-            {% include "includes/reference_card.html.jinja" %}
+            {% include "reference_card.html.jinja" %}
         </div>
         {% endfor %}
     </div>
