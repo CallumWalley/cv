@@ -9,7 +9,7 @@
   overwrite: 
     basics: 
       label: "Mechanical Engineer"
-      image: 'img/rse.png'
+      image: 'img/me.png'
   mask:
     basics: True
     education: 
