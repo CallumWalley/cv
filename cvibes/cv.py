@@ -13,8 +13,6 @@ from slugify import slugify
 from pathlib import Path
 import sass
 
-
-
 def load_json_yaml(path):
     """
     Loads a json, or yaml file from 'path'
@@ -88,12 +86,16 @@ def copy_or_render(source, dest):
 
         if not file.is_file():
             destination.mkdir(exist_ok=True, parents=True)
+            print(f"Created '{destination}'")
 
         elif Path(file).suffix in [".scss", ".sass"]:
             with open(destination.with_suffix(".css"), "w+") as f:
                 f.write(sass.compile(filename=str(file), output_style="compressed"))
+                print(f"Created '{f}'")
+
         else:
             shutil.copy(file, destination)
+            print(f"Created '{destination}'")
 
 class CurriculumVitae:
     """
