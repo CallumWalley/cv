@@ -172,7 +172,7 @@ skills:
   - Software Carpentry Instructor
   - Quarterly 'Introduction to HPC'
   - Workshops at Resbaz 2019-2022
-  - Workshops at eRNZ 2021, 2022
+  - Workshops at eRNZ 2021 - 2023
   - Workshops at NZRSE 2020, 2022
 - slug: docs
   name: Information Architecture
@@ -187,6 +187,7 @@ skills:
   highlights:
   - Solidworks
   - CadQuery
+  - Producte Design
 - slug: rse
   name: Scientific Programming
   description: 'I have worked closely with researchers to help improve their code, and upskill.'
@@ -200,6 +201,7 @@ skills:
   description: ''
   highlights:
   - CI/CD
+  - Building applications
 - name: Data Science
   description: 'Whatever this means to you, I can do it.'
   highlights:
@@ -212,7 +214,9 @@ skills:
   slug: cloud
   description: 'I am familiar with using all the major cloud service providers, and have a firm understanding of core concepts.'
   highlights:
-  - OpenStack
+  - Catalyst Cloud (OpenStack)
+  - Nectar Cloud (OpenStack)
+  - NeSI FlexiHPC (OpenStack)
   - Azure
   - AWS
   - Google Cloud
@@ -238,13 +242,13 @@ skills:
   - LaTex
 - slug: webdev
   name: Web Development
-  description: 'Full Stack'
+  description: '"Full Stack"'
   highlights:
   - NodeJS
   - Djanjo
   - LAMP
   - Wordpress
-  - Static
+  - Various SSGs
 languages:
 - slug: c
   language: C/C++
