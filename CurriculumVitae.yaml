@@ -220,7 +220,8 @@ skills:
   - Azure
   - AWS
   - Google Cloud
-  - Containers
+  - Docker
+  - Singularity
 - slug: hpc
   name: High Performance Computing
   description: 'I have supported and maintained a wide range of HPC services.'
@@ -328,8 +329,8 @@ references:
 - name: Blair Bethwaite
   reference: NeSI Manager
   contact:
-    email: blair.bethwaite@nesi.org.nz
-    blood-sacrifice: not a real contact method
+    email: 
+    messenger-pidgeon: not a real contact method
 projects:
 - name: 'AscTec Pelican Controller Design'
 - name: 'Whatever I did with that IMU thingy'
@@ -340,16 +341,23 @@ projects:
   - HTML
   start_date: ''
   end_date: ''
-  url: ''
+  url: 'https://swageturn.com/'
   roles: ''
   entity: ''
   type: ''
 - name: 'VDT'
+  url: 'https://github.com/nesi/nesi-virtual-desktops'
+  description: Visualisation for the HPC. Was supposed to fill the gap until we got something better, but that never happened.
 - name: 'Introduction to High Performance Computing'
+  url: 'https://github.com/nesi/hpc-intro'
+  description: Adtapted from an unofficial SWC lesson, I have spent a lot of time refining the material, and delivery of this lesson. 
 - name: 'High Performance Computing Workflows'
 - name: 'NeSI Support Documentation'
+  description: The framework used for NeSI support documentation was not fit for purpose. I wrote several custom templates for generating content dynamically, adding admonations, working code blocks etc.
 - name: 'RStudio Server with Jupyter'
+  description: 
 - name: 'Introduction to Singularity'
+- name: 'Automated Accounting Workflow'
 - name: 'Docs 2.0 ;)'
 
 
