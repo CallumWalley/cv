@@ -9,12 +9,20 @@ $theme-secondry: #333333
     size: 21cm 29.7cm
     margin: 30mm 45mm 30mm 45mm
 
-#portrait
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)
+#portrait >svg,img
     position: absolute
     width: 15%
     margin-top: -1.5em
     margin-left: 1em
+
+#portrait > svg
+        stroke: $theme-primary
+        stroke-width: 4px
+        fill: none
+
+#portrait > img
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)
+
 
 body
     font-family: 'Helvetica', 'Arial', sans-serif
