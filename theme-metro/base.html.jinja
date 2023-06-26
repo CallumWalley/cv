@@ -14,6 +14,7 @@
     <div class="vline"></div>
     <div class="flex">
         <div class="column column--left">
+            <div class="leaf"></div>
             {% set items=(education | sort(attribute='startDate')) %}
             {% set title="Education" %}
             {% include "tree.html.jinja" %}
@@ -22,6 +23,7 @@
             {% include "tree.html.jinja" %}
         </div>
         <div class="column column--right">
+            <div class="leaf"></div>
             {% set items=(skills) %}
             {% set title="Skills" %}
             {% include "tree.html.jinja" %}
