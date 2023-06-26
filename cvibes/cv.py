@@ -67,14 +67,14 @@ def kw_overwrite(obj, overwrite_values):
 def html2pdf(html, pdf_path):
     """Attempts to render html to pdf"""
     options = {
-        "page-size": "Letter",
-        "margin-top": "0.35in",
-        "margin-right": "0.75in",
-        "margin-bottom": "0.75in",
-        "margin-left": "0.75in",
+        "page-size": "A4",
+        "margin-top": "0",
+        "margin-right": "0",
+        "margin-bottom": "0",
+        "margin-left": "0",
         "encoding": "UTF-8",
         "enable-local-file-access": True,
-        # "user-style-sheet": "style/base.css",
+        "keep-relative-links": True
     }
     pdfkit.from_string(html, pdf_path, options=options, verbose=True)
 
@@ -151,7 +151,9 @@ class CurriculumVitae:
             (default is False)
         """
 
-        if len(outputs) > 1:
+        
+
+        if len(outputs) < 1:
             raise Exception("Must have at least one valid output")
 
         # Filter CV data.
@@ -172,7 +174,8 @@ class CurriculumVitae:
         # Get the 'base' template
         template_main = jinja_env.get_template((theme_variables["base"]))
 
-        build_dir = Path(outputs[0]).parent
+        #build_dir = ".build"
+        build_dir =  Path(outputs[0]).parent
 
         # TODO do this with less assumptions.
         # TODO If no 'web' output specified, should make tmpdir and use that.
@@ -188,6 +191,7 @@ class CurriculumVitae:
 
         html = template_main.render(**masked_cv)
 
+
         for output in outputs:
             file_type = Path(output).suffix
             Path(output).parent.mkdir(parents=True, exist_ok=True)
@@ -196,6 +200,7 @@ class CurriculumVitae:
                     f.write(html)
                 print(f"Created {output}")
             elif file_type == ".pdf":
+                os.environ["TMP"] = str(build_dir)
                 html2pdf(html, output)
                 print(f"Created {output}")
             else:
