@@ -9,11 +9,10 @@ jobs:
   readme:
     runs-on: ubuntu-latest
     steps:
-      - name: Install Dependencies
-        run: |
-          pip install -r requirements.txt
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Install Dependencies
+        run: pip install -r requirements.txt
       - name: Generate README.md
         run: pydoc-markdown -I cvibes/ > cvibes/README.md
       - name: Commit to main
