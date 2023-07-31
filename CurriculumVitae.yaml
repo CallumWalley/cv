@@ -12,6 +12,11 @@ basics:
     city: Auckland
     countryCode: NZ
   profiles:
+  - network: Mastodon
+    username: cal@mastodon.nz
+    url: cal@mastodon.nz
+    favicon: "https://mastodon.social/favicon.ico"
+    fa_icon_class: "fa fa-mastodon"
   - network: Twitter
     username: calw
     url: https://twitter.com/calw
