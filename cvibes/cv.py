@@ -151,7 +151,7 @@ class CurriculumVitae:
             (default is False)
         """
 
-        if len(outputs) > 1:
+        if len(outputs) < 1:
             raise Exception("Must have at least one valid output")
 
         # Filter CV data.
