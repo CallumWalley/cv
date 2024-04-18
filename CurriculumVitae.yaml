@@ -12,6 +12,11 @@ basics:
     city: Auckland
     countryCode: NZ
   profiles:
+  - network: Mastodon
+    username: cal@mastodon.nz
+    url: cal@mastodon.nz
+    favicon: "https://mastodon.social/favicon.ico"
+    fa_icon_class: "fa fa-mastodon"
   - network: Twitter
     username: calw
     url: https://twitter.com/calw
@@ -172,7 +177,7 @@ skills:
   - Software Carpentry Instructor
   - Quarterly 'Introduction to HPC'
   - Workshops at Resbaz 2019-2022
-  - Workshops at eRNZ 2021, 2022
+  - Workshops at eRNZ 2021 - 2023
   - Workshops at NZRSE 2020, 2022
 - slug: docs
   name: Information Architecture
@@ -183,10 +188,11 @@ skills:
   - Training material
 - slug: cad
   name: Engineering CAD
-  description: 'I am a qualified Engineer with years of experience.'
+  description: 'I am a qualified Engineer with years of experience in CAD.'
   highlights:
   - Solidworks
   - CadQuery
+  - Producte Design
 - slug: rse
   name: Scientific Programming
   description: 'I have worked closely with researchers to help improve their code, and upskill.'
@@ -200,6 +206,7 @@ skills:
   description: ''
   highlights:
   - CI/CD
+  - Building applications
 - name: Data Science
   description: 'Whatever this means to you, I can do it.'
   highlights:
@@ -212,11 +219,14 @@ skills:
   slug: cloud
   description: 'I am familiar with using all the major cloud service providers, and have a firm understanding of core concepts.'
   highlights:
-  - OpenStack
+  - Catalyst Cloud (OpenStack)
+  - Nectar Cloud (OpenStack)
+  - NeSI FlexiHPC (OpenStack)
   - Azure
   - AWS
   - Google Cloud
-  - Containers
+  - Docker
+  - Singularity
 - slug: hpc
   name: High Performance Computing
   description: 'I have supported and maintained a wide range of HPC services.'
@@ -238,49 +248,67 @@ skills:
   - LaTex
 - slug: webdev
   name: Web Development
-  description: 'Full Stack'
+  description: '"Full Stack"'
   highlights:
   - NodeJS
   - Djanjo
   - LAMP
   - Wordpress
-  - Static
+  - Various SSGs
 languages:
 - slug: c
   language: C/C++
   experience: Research Software Development
-  highlights: []
+  highlights: [
+    - I have used C primarily in my work optimising and parallelising researcher applications.
+  ]
   rating: Competent
 - slug: cs
   language: C#
   experience: Research Software Development
-  highlights: []
+  highlights: [
+      - Mainly from side projects.
+  ]
   rating: Competent
 - slug: js
   language: JavaScript
   experience: Node and frontend
-  highlights: []
+  highlights: [
+      - I have experience with several different frameworks.
+  ]
   rating: Competent
 - slug: web
   language: HTML/CSS
   experience: Commercial Web Development
-  highlights: []
+  highlights: [
+      - tycho.co.nz
+      - swageturn.com
+      - Work at NeSI
+  ]
   rating: Familiar
 - language: PHP
   experience: Extensive customisation of wordpress template for large online store
-  highlights: []
+  highlights: [
+    - swageturn.com
+  ]
   rating: Familiar
 - language: Python
   experience: Scientific Programming, apps, webservices
-  highlights: []
+  highlights: [
+    - Language of choice for most things.
+  ]
   rating: Competent
 - language: MATLAB
   experience: Scientific Programming
-  highlights: []
+  highlights: [
+    - I didn't say I liked it.
+  ]
   rating: Competent
 - language: Bash
   experience: I bash everything
-  highlights: []
+  highlights: [
+     - Even when it's not the best choice.
+  ]
   rating: Competent
 - language: Fortran
   experience: UDFs for CAE applications
@@ -296,12 +324,20 @@ languages:
   rating: Familiar
 - language: VBA
   experience: Shamefully. Generating and maintaining large product databases
-  highlights: []
+  highlights: [
+    - Excel macros
+    - Solidworks macros
+  ]
   rating: Familiar
 - language: SQL
   experience: Web backends, data visulisation
   rating: Familiar
-  highlights: []
+  highlights: [
+    - PostgreSQL
+    - MariaDB
+    - MySQL
+    - SQLite
+  ]
 interests:
 - name: Hiking
   highlights: []
@@ -324,8 +360,8 @@ references:
 - name: Blair Bethwaite
   reference: NeSI Manager
   contact:
-    email: blair.bethwaite@nesi.org.nz
-    blood-sacrifice: not a real contact method
+    email: 
+    messenger-pidgeon: not a real contact method
 projects:
 - name: 'AscTec Pelican Controller Design'
 - name: 'Whatever I did with that IMU thingy'
@@ -336,16 +372,23 @@ projects:
   - HTML
   start_date: ''
   end_date: ''
-  url: ''
+  url: 'https://swageturn.com/'
   roles: ''
   entity: ''
   type: ''
 - name: 'VDT'
+  url: 'https://github.com/nesi/nesi-virtual-desktops'
+  description: Visualisation for the HPC. Was supposed to fill the gap until we got something better, but that never happened.
 - name: 'Introduction to High Performance Computing'
+  url: 'https://github.com/nesi/hpc-intro'
+  description: Adtapted from an unofficial SWC lesson, I have spent a lot of time refining the material, and delivery of this lesson. 
 - name: 'High Performance Computing Workflows'
 - name: 'NeSI Support Documentation'
+  description: The framework used for NeSI support documentation was not fit for purpose. I wrote several custom templates for generating content dynamically, adding admonations, working code blocks etc.
 - name: 'RStudio Server with Jupyter'
+  description: 
 - name: 'Introduction to Singularity'
+- name: 'Automated Accounting Workflow'
 - name: 'Docs 2.0 ;)'
 
 

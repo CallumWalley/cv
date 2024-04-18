@@ -9,20 +9,27 @@ $theme-secondry: #333333
     size: 21cm 29.7cm
     margin: 30mm 45mm 30mm 45mm
 
-#portrait
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)
+#portrait >svg,img
     position: absolute
     width: 15%
     margin-top: -1.5em
     margin-left: 1em
 
+#portrait > svg
+        stroke: $theme-primary
+        stroke-width: 2px
+        fill: none
+
+#portrait > img
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)
+
+
 body
     font-family: 'Helvetica', 'Arial', sans-serif
     font-weight: 300
     font-style: normal
-    font-size: 12pt
+    font-size: 10pt
     margin: 5px
-    max-width: 49em
 
 h1
     font-size: 150%
@@ -40,9 +47,6 @@ h3
     font-size: 100%
     font-weight: 600
     margin: 0
-// h2::before,
-// h3::before
-
 
 i
     padding-right: 5px
@@ -50,7 +54,7 @@ i
 .stub
     margin-left: 1em
 .stub::before
-    border-bottom: $theme-primary solid
+    border-bottom: $theme-primary solid 2px
     width: 0.5em
     height: 0.5em
     display: inline-block
@@ -75,11 +79,12 @@ li
     margin: 0
 
 .tree
+    font-size: 120%
     // display: flex
 
 .leaf 
     margin: 0
-    border-left: $theme-primary solid
+    border-left: $theme-primary solid 2px
 
 .leaf > :not(.stub)
     margin-left: 2em
@@ -89,9 +94,13 @@ li
 
 .leaf:last-of-type::before
     height: 0.7em
-    border-left: $theme-primary solid
+    border-left: $theme-primary solid 2px
     position: absolute
     content: " "
+    
+.column>.leaf:first-of-type
+    padding-top: 1em
+
 
 .flex
     display: flex
