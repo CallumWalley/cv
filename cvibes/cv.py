@@ -9,6 +9,7 @@ import datetime
 import pdfkit
 import shutil
 import yaml
+from tempfile import TemporaryDirectory
 from slugify import slugify
 from pathlib import Path
 import sass
@@ -74,7 +75,7 @@ def html2pdf(html, pdf_path):
         "margin-left": "0",
         "encoding": "UTF-8",
         "enable-local-file-access": True,
-        "keep-relative-links": True
+        "keep-relative-links": False
     }
     pdfkit.from_string(html, pdf_path, options=options, verbose=True)
 
@@ -158,10 +159,9 @@ class CurriculumVitae:
         masked_cv = kw_mask(self.cv, mask)
 
         if overwrite:
-            masked_cv=kw_overwrite(masked_cv, overwrite)
+            masked_cv = kw_overwrite(masked_cv, overwrite)
 
-        #print(cv)
-        theme_variables=load_json_yaml(Path(theme, "theme.yaml"))
+        theme_variables = load_json_yaml(Path(theme, "theme.yaml"))
 
         # TODO make this work for other config files e.g. theme.yml
 
@@ -172,33 +172,33 @@ class CurriculumVitae:
         # Get the 'base' template
         template_main = jinja_env.get_template((theme_variables["base"]))
 
-        #build_dir = ".build"
-        build_dir =  Path(outputs[0]).parent
+        # build_dir = ".build"
+        # build_dir = TemporaryDirectory()  # Path(outputs[0]).parent
 
         # TODO do this with less assumptions.
         # TODO If no 'web' output specified, should make tmpdir and use that.
 
         # Copy THEME includes (css, etc)
         if "includes" in theme_variables:
-            copy_or_render(Path(theme, theme_variables["includes"]), build_dir)
+            copy_or_render(Path(theme, theme_variables["includes"]), "/tmp")
 
         # Copy VIBE includes (images, css overwrites etc)
         if includes:
-            copy_or_render(includes, build_dir)
-
+            copy_or_render(includes, "/tmp")
 
         html = template_main.render(**masked_cv)
-
-
+  
         for output in outputs:
-            file_type = Path(output).suffix
-            Path(output).parent.mkdir(parents=True, exist_ok=True)
+            output = Path(output)
+            file_type = output.suffix
+            output.parent.mkdir(parents=True, exist_ok=True)
+            # os.chdir(output.parent)
             if file_type == ".html":
                 with open(output, "w+") as f:
                     f.write(html)
                 print(f"Created {output}")
             elif file_type == ".pdf":
-                os.environ["TMP"] = str(build_dir)
+                os.environ["TMP"] = str(theme)
                 html2pdf(html, output)
                 print(f"Created {output}")
             else:
