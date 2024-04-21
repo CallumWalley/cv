@@ -2,3 +2,5 @@ css-html-js-minify
 pdfkit
 python-slugify
 libsass
+jinja2
+pyyaml

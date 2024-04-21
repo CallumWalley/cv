@@ -1,3 +1,15 @@
+## Setup
+
+
+```sh
+git clone https://github.com/
+cd 
+python -m venv .venv
+source .venv/bin/activate
+pip3 install -r requirements.txt
+```
+
+
 <a id="__init__"></a>
 
 # \_\_init\_\_
