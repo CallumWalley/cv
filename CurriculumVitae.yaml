@@ -12,16 +12,11 @@ basics:
     city: Auckland
     countryCode: NZ
   profiles:
-  - network: Mastodon
-    username: cal@mastodon.nz
-    url: cal@mastodon.nz
-    favicon: "https://mastodon.social/favicon.ico"
-    fa_icon_class: "fa fa-mastodon"
-  - network: Twitter
-    username: calw
-    url: https://twitter.com/calw
-    favicon: "https://twitter.com/favicon.ico"
-    fa_icon_class: "fa fa-twitter"
+  # - network: Mastodon
+  #   username: cal@mastodon.nz
+  #   url: cal@mastodon.nz
+  #   favicon: "https://mastodon.social/favicon.ico"
+  #   fa_icon_class: "fa fa-mastodon"
   - network: GitHub
     username: CallumWalley
     url: https://github.com/CallumWalley
@@ -32,12 +27,11 @@ basics:
     url: https://www.linkedin.com/in/callum-macdonald-walley-227339142/
     favicon: "https://www.linkedin.com/favicon.ico"
     fa_icon_class: "fa fa-linkedin"
-  - network: tycho
-    username: tycho.co.nz
-    url: https://tycho.co.nz
-    favicon: ""
-    fa_icon_class: "fa-solid fa-moon"
-
+  # - network: tycho
+  #   username: tycho.co.nz
+  #   url: https://tycho.co.nz
+  #   favicon: ""
+  #   fa_icon_class: "fa-solid fa-moon"
 work:
 - name: NeSI
   name_long: New Zealand eScience Infrastructure
