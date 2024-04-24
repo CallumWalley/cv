@@ -52,7 +52,6 @@ work:
   description: Engineering Design
   highlights:
   - Engineering CAD
-  - Primarily Long Term Clients
 - name: AUT
   position: Research Assistant
   url: ''
@@ -66,16 +65,16 @@ work:
 - slug: wsp
   name: White Star Products
   position: Trainee Engineer
-  url: https://swageturn.com/
+  url: https://www.swageturn.com/
   start_date: '2017'
   end_date: '2018'
   summary: ''
   highlights:
-  - Built <a href="www.swageturn.co.nz">www.swageturn.co.nz</a>
-  - Models, renders, and sheets for 200+ parts
-  - Marketing Material
-  - Product Management
-  - Engineering Advice
+  - Built <a href="https://www.swageturn.com">www.swageturn.com/</a>
+  - Product Management, Engineering Design
+  # - Models, renders, and sheets for 200+ parts
+  # - Marketing Material
+  # - Engineering Advice
 volunteer:
 - name: ARHT
   name_long: Auckland Rescue Helicopter Trust
@@ -348,8 +347,11 @@ references:
     messenger-pidgeon: not a real contact method
 projects:
 - name: 'AscTec Pelican Controller Design'
-- name: 'Whatever I did with that IMU thingy'
+  slug: drone
+- name: 'IMU Instrumentation Design'
+  slug: imu
 - name: 'Swageturn Website'
+  slug: swageturn
   description: ''
   highlights:
   - HTML
@@ -363,16 +365,23 @@ projects:
   url: 'https://github.com/nesi/nesi-virtual-desktops'
   description: Visualisation for the HPC. Was supposed to fill the gap until we got something better, but that never happened.
 - name: 'Introduction to High Performance Computing'
+  slug: introhpc
   url: 'https://github.com/nesi/hpc-intro'
   description: Adtapted from an unofficial SWC lesson, I have spent a lot of time refining the material, and delivery of this lesson. 
 - name: 'High Performance Computing Workflows'
+  slug: introhpc2
 - name: 'NeSI Support Documentation'
+  slug: docs1
   description: The framework used for NeSI support documentation was not fit for purpose. I wrote several custom templates for generating content dynamically, adding admonations, working code blocks etc.
 - name: 'RStudio Server with Jupyter'
+  slug: RStudio
   description: 
-- name: 'Introduction to Singularity'
+- name: 'Introduction to HPC containers'
+  slug: containers
 - name: 'Automated Accounting Workflow'
-- name: 'Docs 2.0 ;)'
-
+- name: 'docs.nesi'
+  slug: mkdocs
+  url: 'https://docs.nesi.org.nz'
+  description: 'NeSI Support Documentation'
 
 
