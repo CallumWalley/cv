@@ -9,6 +9,16 @@ $theme-secondry: #333333
     size: 21cm 29.7cm
     margin: 30mm 45mm 30mm 45mm
 
+
+#docname
+    width: 100%
+
+#docname > h5
+    text-align: right
+    margin: 0
+    padding: 0 2rem 0 2rem
+
+
 #portrait >svg,img
     position: absolute
     width: 15%
@@ -80,7 +90,7 @@ li
 
 .tree
     font-size: 120%
-    // display: flex
+    width: 100%
 
 .leaf 
     margin: 0
@@ -100,6 +110,13 @@ li
     
 .column>.leaf:first-of-type
     padding-top: 1em
+
+#basics>.tree>.flex 
+    padding-left: 140px // Padding out area under portrait
+
+#basics>.tree>.flex.social
+    padding-left: 100px // Padding out area under portrait
+
 
 
 .flex
@@ -131,8 +148,7 @@ p
 
 .vline
     width: 100%
-    height: 2px
-    background-color: $theme-primary
+    border-bottom: $theme-primary 2px solid
 
 @media print
     body
