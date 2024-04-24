@@ -1,4 +1,0 @@
----
-base: "base.html.jinja"
-env: "."
-includes: "includes"
