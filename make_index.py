@@ -8,7 +8,6 @@ import re
 import datetime
 import pdfkit
 import yaml
-from cvibes.cv import load_json_yaml
 from pathlib import Path
 
 
@@ -18,7 +17,7 @@ INDEX_TEMPLATE = "index.html.jinja"
 
 if __name__ == "__main__":
 
-    vibes = load_json_yaml(VIBES_FILE)
+    vibes = yaml.safe_load(open(VIBES_FILE))
 
     jinja_env = jinja2.environment.Environment(
         loader=jinja2.FileSystemLoader(Path(INDEX_TEMPLATE).parent)

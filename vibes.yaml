@@ -1,87 +1,121 @@
-- theme: theme-metro
+---
+- outputs:
+    - docs/all.html
+  includes: includes
+- theme_options:
+    show_portrait: false
   outputs:
-  - docs/all.html
-  includes: "includes"
-- theme: theme-metro
-  outputs:
-  - docs/me.html
-  includes: "includes"
-  overwrite: 
-    basics: 
-      label: "Mechanical Engineer"
+    - docs/me.html
+  includes: includes
+  overwrite:
+    basics:
+      label: Mechanical Engineer 
       image: 'img/me.png'
   mask:
-    basics: True
-    education: 
-    - aut
-    work: True
-    volunteer: True
-    skills: 
-    - rse
-    - data-science
-    - cloud
-    - hpc
+    basics: true
+    profiles: true
+    education:
+      - aut
+    work: true
+    volunteer: true
+    skills:
+      - rse
+      - data-science
+      - cloud
+      - hpc
     languages:
-    - c
-    - cs
-    - python
-    - js
-    - fortran
-    - matlab
-    - sql
-- theme: theme-metro
-  outputs:
-  - docs/rse.html
-  # - pdf/rse.pdf
-  includes: "includes"
-  overwrite: 
-    basics: 
-      label: "Research Software Engineer"
-      image: 'img/rse.png'
+      - c
+      - cs
+      - python
+      - js
+      - fortran
+      - matlab
+      - sql
+- outputs:
+    - docs/mwlr.html
+  theme_options:
+    color_primary: rgb(0, 100, 8)
+    show_portrait: False
+  overwrite:
+    basics:
+      label: Research Software Engineer
   mask:
-    basics: True
-    education: 
-    - aut
-    work: True
-    volunteer: True
-    skills: 
-    - rse
-    - data-science
-    - cloud
-    - hpc
-    languages:
-    - c
-    - cs
-    - python
-    - js
-    - fortran
-    - matlab
-    - sql
-- includes: "includes"
-  theme: theme-metro
+    basics: true
+    profiles:
+      - github
+      - linkedin
+    education:
+      - aut
+    work: true
+    volunteer: true
+    languages: true
+    skills:
+      - training
+      - rse
+      - cloud
+      - hpc
+    projects:
+      - drone
+      - docs1
+      - hpcintro
+      - mkdocs
+      - rstudio
+      - vdt
+- includes: includes
   outputs:
-  - docs/web.html
-  overwrite: 
-    basics: 
-      label: "Cloud Farmer"
+    - docs/web.html
+  overwrite:
+    basics:
+      label: Cloud Farmer
   mask:
-    basics: True
-    education: 
-    - aut
-    work: True
-    volunteer: True
-    skills: 
-    - training
-    - docs
-    - data-science
-    - cloud
+    basics: true
+    profiles: true
+    education:
+      - aut
+    work: true
+    volunteer: true
+    skills:
+      - training
+      - docs
+      - data-science
+      - cloud
     languages:
-    - c
-    - cs
-    - python
-    - js
-    - fortran
-    - matlab
-    - sql
-    qualifications: 
-    - "swc"
+      - c
+      - cs
+      - python
+      - js
+      - fortran
+      - matlab
+      - sql
+    qualifications:
+      - swc
+- includes: includes
+  outputs:
+    - docs/design.html
+  theme_options:
+    color_primary: rgb(128, 8, 88)
+  overwrite:
+    basics:
+      label: Digital Designer
+  mask:
+    basics: true
+    profiles: true
+    education:
+      - aut
+    work: true
+    volunteer: true
+    skills:
+      - training
+      - docs
+      - data-science
+      - cloud
+    languages:
+      - c
+      - cs
+      - python
+      - js
+      - fortran
+      - matlab
+      - sql
+    qualifications:
+      - swc
