@@ -1,5 +1,5 @@
 #!/bin/bash 
-
-python3 make_all.py
-python3 make_index.py
-cd docs && python3 -m http.server
+source .venv/bin/activate
+python make_all.py
+python make_index.py
+cd docs && python3 -m http.server "$@"
