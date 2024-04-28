@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from cvibes.cv import CurriculumVitae, load_json_yaml
+from crass.cv import CurriculumVitae, load_json_yaml
 
 if __name__ == "__main__":
 
@@ -9,4 +9,3 @@ if __name__ == "__main__":
 
     for vibe in vibes:
         cv.generate_vibe(**vibe)
-    
