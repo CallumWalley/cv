@@ -348,13 +348,19 @@ references:
 projects:
 - name: 'AscTec Pelican Controller Design'
   slug: drone
+  description: |
+    Created a framework for development and testing of controllers in a quadcopter UAV. 
+    Initially part of my final year honors project, this became the foundation for my job as a research assistant.
 - name: 'IMU Instrumentation Design'
   slug: imu
+  description: Provided technical guidance for two PhD candidates in creating a framework for developing and testing IMU (Inertial Measurement Unit) algorithms for MIMO (Multi-Input Multi-Output) systems.  
 - name: 'Swageturn Website'
   slug: swageturn
-  description: ''
+  description: 'While working for a trainee engineer, I built a new website for their products from scratch.'
   highlights:
-  - HTML
+  - Almost 800 products, all with several variations.
+  - Hundreds of renders and sheets.
+  - Built on Wordpress with extensive customisation.
   start_date: ''
   end_date: ''
   url: 'https://swageturn.com/'
@@ -363,25 +369,28 @@ projects:
   type: ''
 - name: 'VDT'
   url: 'https://github.com/nesi/nesi-virtual-desktops'
-  description: Visualisation for the HPC. Was supposed to fill the gap until we got something better, but that never happened.
+  description: Desktop Visualisation service for NeSI HPC. Was intended to fill a gap until something better could be developed. Still in use.
 - name: 'Introduction to High Performance Computing'
   slug: introhpc
   url: 'https://github.com/nesi/hpc-intro'
   description: Adtapted from an unofficial SWC lesson, I have spent a lot of time refining the material, and delivery of this lesson. 
 - name: 'High Performance Computing Workflows'
   slug: introhpc2
+  description: Original workshop developed to teach advanced bash and Slurm skills (not yet delived).
 - name: 'NeSI Support Documentation'
   slug: docs1
   description: The framework used for NeSI support documentation was not fit for purpose. I wrote several custom templates for generating content dynamically, adding admonations, working code blocks etc.
-- name: 'RStudio Server with Jupyter'
+- name: 'RStudio Server via Jupyter'
   slug: RStudio
-  description: 
+  description: Integration for JupyterHub to allow use of RStudio Desktop on the NeSI HPC environment.
 - name: 'Introduction to HPC containers'
+  description: Workshop delivered at serveral ERNZ and NZRSE conferences.
   slug: containers
-- name: 'Automated Accounting Workflow'
+- name: 'Accounting Automation'
+  description: I have automated statement ingestion, classification, time tracking, invoicing etc.
 - name: 'docs.nesi'
   slug: mkdocs
   url: 'https://docs.nesi.org.nz'
-  description: 'NeSI Support Documentation'
+  description: 'Advocated for, then lead the move from use of a proprietory CMS system that did not fit our needs, to a OpenSource markdown based system served through GitHub.
 
 
