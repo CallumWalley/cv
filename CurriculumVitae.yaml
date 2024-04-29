@@ -380,17 +380,15 @@ projects:
 - name: 'NeSI Support Documentation'
   slug: docs1
   description: The framework used for NeSI support documentation was not fit for purpose. I wrote several custom templates for generating content dynamically, adding admonations, working code blocks etc.
-- name: 'RStudio Server via Jupyter'
+- name: RStudio Server via Jupyter
   slug: RStudio
   description: Integration for JupyterHub to allow use of RStudio Desktop on the NeSI HPC environment.
-- name: 'Introduction to HPC containers'
+- name: Introduction to HPC containers
   description: Workshop delivered at serveral ERNZ and NZRSE conferences.
   slug: containers
-- name: 'Accounting Automation'
+- name: Accounting Automation
   description: I have automated statement ingestion, classification, time tracking, invoicing etc.
-- name: 'docs.nesi'
+- name: docs.nesi
   slug: mkdocs
-  url: 'https://docs.nesi.org.nz'
-  description: 'Advocated for, then lead the move from use of a proprietory CMS system that did not fit our needs, to a OpenSource markdown based system served through GitHub.
-
-
+  url: https://docs.nesi.org.nz
+  description: Advocated for, then lead the move from use of a proprietory CMS system that did not fit our needs, to a OpenSource markdown based system served through GitHub.
