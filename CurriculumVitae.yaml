@@ -23,8 +23,8 @@ profiles:
   favicon: "https://github.com/favicon.ico"
   fa_icon_class: "fa fa-github"
 - network: LinkedIn
-  username: callum-macdonald-walley-227339142
-  url: https://www.linkedin.com/in/callum-macdonald-walley-227339142/
+  username: cal-nz
+  url: https://www.linkedin.com/in/cal-nz/
   favicon: "https://www.linkedin.com/favicon.ico"
   fa_icon_class: "fa fa-linkedin"
 - network: tycho
@@ -39,7 +39,6 @@ work:
   url: https://support.nesi.org.nz/hc/en-gb
   start_date: '2018'
   end_date: Current
-  description: Support
   highlights:
   - Training
   - Documentation
@@ -49,15 +48,14 @@ work:
   url: https://company.com
   start_date: '2018'
   end_date: Current
-  description: Engineering Design
   highlights:
   - Engineering CAD
+  - Digital Design
 - name: AUT
   position: Research Assistant
   url: ''
   start_date: '2016'
   end_date: '2017'
-  description: 
   highlights:
   - UAV Controller Design
   - IMU Filters
