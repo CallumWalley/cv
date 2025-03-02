@@ -40,9 +40,9 @@ work:
   start_date: '2018'
   end_date: Current
   highlights:
-  - Training
-  - Documentation
-  - eRNZ
+  - Training Development and Delivery
+  - HPC Support Devops 
+  - Cloud Services
 - name: Tycho
   position: Sole Employee
   url: https://company.com
@@ -58,7 +58,7 @@ work:
   end_date: '2017'
   highlights:
   - UAV Controller Design
-  - IMU Filters
+  - IMU Filtering
   - Instrumentation Design
 - slug: wsp
   name: White Star Products
@@ -68,8 +68,9 @@ work:
   end_date: '2018'
   summary: ''
   highlights:
-  - Built <a href="https://www.swageturn.com">www.swageturn.com/</a>
-  - Product Management, Engineering Design
+  - Web Design
+  - Product Management 
+  - Engineering CAD
   # - Models, renders, and sheets for 200+ parts
   # - Marketing Material
   # - Engineering Advice
@@ -82,7 +83,7 @@ volunteer:
   end_date: '2021'
   description: ''
   highlights:
-  - Represented Volanteers at 2014 Royal Reception.
+  - Volunteer Representative for EMS at Royal Reception.
 education:
 - slug: macleans
   name: Macleans Collage
@@ -96,7 +97,7 @@ education:
   name: AUT University
   name_long: Auckland University of Technology University
   url: ''
-  position: Mechanical Engineering (Honors)
+  position: Mechanical Engineering (Hons)
   start_date: '2013'
   end_date: '2017'
 awards:
@@ -155,7 +156,7 @@ qualifications:
   issuer: ''
   url: ''
 - slug: drivers-lic
-  name: Full Drivers Licence
+  name: Full Drivers Licence (Manual)
   date: ''
   issuer_short: NZTA
   issuer: ''
@@ -167,15 +168,13 @@ skills:
   highlights:
   - Software Carpentry Instructor
   - Quarterly 'Introduction to HPC'
-  - Workshops at Resbaz 2019-2022
-  - Workshops at eRNZ 2021 - 2023
-  - Workshops at NZRSE 2020, 2022
+  - Workshops at Resbaz, eRNZ, NZRSE, ASP
 - slug: docs
   name: Information Architecture
   description: I enjoy organising information in a way that is
     accessible, intuitive and maintainable.
   highlights:
-  - mkdocs
+  - docs.nesi.org.nz
   - Training material
 - slug: cad
   name: Engineering CAD
@@ -183,21 +182,21 @@ skills:
   highlights:
   - Solidworks
   - CadQuery
-  - Producte Design
+  - Product Design
+- slug: support
+  name: Support
 - slug: rse
   name: Scientific Programming
-  description: 'I have worked closely with researchers to help improve their code, and upskill.'
+  description: 'I have worked closely with researchers to help them upskill and improve their code.'
   highlights:
   - Reproducability
   - Workflow Design
   - Paralellisation
   - Optimisation
-  - FAIR
 - name: DevOps
   description: ''
   highlights:
-  - CI/CD
-  - Building applications
+  - GitLab CI/CD / GitHub Actions
 - name: Data Science
   description: 'Whatever this means to you, I can do it.'
   highlights:
@@ -210,22 +209,18 @@ skills:
   slug: cloud
   description: 'I am familiar with using all the major cloud service providers, and have a firm understanding of core concepts.'
   highlights:
-  - Catalyst Cloud (OpenStack)
-  - Nectar Cloud (OpenStack)
-  - NeSI FlexiHPC (OpenStack)
-  - Azure
+  - OpenStack (Catalyst, Nectar, FlexiHPC)
   - AWS
   - Google Cloud
-  - Docker
-  - Singularity
+  - Docker / Singularity
 - slug: hpc
   name: High Performance Computing
   description: 'I have supported and maintained a wide range of HPC services.'
   highlights:
-  - Bash
-  - Module software stack
-  - Scheduler (SLURM)
-  - Containers
+  - I love Bash 
+  - Lmod Software Stack
+  - Job Scheduling (Slurm)
+  - Containerisation (Singularity/Docker)
   - Visualisation 
 - slug: design
   name: Digital Design
@@ -271,7 +266,7 @@ languages:
   highlights: 
       - tycho.co.nz
       - swageturn.com
-      - Work at NeSI
+      - docs.nesi.org.nz
   rating: Familiar
 - language: PHP
   experience: Extensive customisation of wordpress template for large online store
@@ -325,7 +320,7 @@ interests:
 - name: Sailing
   highlights:
   - Skipper Tallships Winner 2007
-  - Windsurfing
+  - Windsurfing + Foiling
 - name: Art
   highlights: []
 - name: Coding
@@ -344,10 +339,10 @@ references:
     email: 
     messenger-pidgeon: not a real contact method
 projects:
-- name: 'AscTec Pelican Controller Design'
+- name: 'UAV Controller Design'
   slug: drone
   description: |
-    Created a framework for development and testing of controllers in a quadcopter UAV. 
+    Created a framework for development and testing of controllers in a AscTec Pelican UAV. 
     Initially part of my final year honors project, this became the foundation for my job as a research assistant.
 - name: 'IMU Instrumentation Design'
   slug: imu
@@ -365,19 +360,17 @@ projects:
   roles: ''
   entity: ''
   type: ''
-- name: 'VDT'
+- name: 'VDT (Virtual Desktop)'
+  slug: vdt
   url: 'https://github.com/nesi/nesi-virtual-desktops'
-  description: Desktop Visualisation service for NeSI HPC. Was intended to fill a gap until something better could be developed. Still in use.
+  description: VDT Desktop Visualisation service for NeSI HPC, delivers hardware accelerated rendering via an easy to use desktop environment. Was intended to fill a gap until something better could be developed. Still in use. 
 - name: 'Introduction to High Performance Computing'
   slug: introhpc
   url: 'https://github.com/nesi/hpc-intro'
-  description: Adtapted from an unofficial SWC lesson, I have spent a lot of time refining the material, and delivery of this lesson. 
+  description: Adtapted from an unofficial SWC lesson, I have spent a lot of time adding to, refining the material, and delivery of this lesson. 
 - name: 'High Performance Computing Workflows'
   slug: introhpc2
   description: Original workshop developed to teach advanced bash and Slurm skills (not yet delived).
-- name: 'NeSI Support Documentation'
-  slug: docs1
-  description: The framework used for NeSI support documentation was not fit for purpose. I wrote several custom templates for generating content dynamically, adding admonations, working code blocks etc.
 - name: RStudio Server via Jupyter
   slug: RStudio
   description: Integration for JupyterHub to allow use of RStudio Desktop on the NeSI HPC environment.
@@ -386,7 +379,7 @@ projects:
   slug: containers
 - name: Accounting Automation
   description: I have automated statement ingestion, classification, time tracking, invoicing etc.
-- name: docs.nesi
-  slug: mkdocs
+- name: 'NeSI Support Documentation'
+  slug: docs
   url: https://docs.nesi.org.nz
   description: Advocated for, then lead the move from use of a proprietory CMS system that did not fit our needs, to a OpenSource markdown based system served through GitHub.
