@@ -32,12 +32,6 @@ Similar to <https://github.com/nikaro/resume-pycli>
 
 `cvibes` stupidly named python package does all the stuff.
 
-### `theme-metro/`
-
-A theme contains all the jinja files, css and other assets specific to the theme.
-More info on theme in `SPECIFICATION`
-This theme is called `metro` cause my bf said my cv looked like a subway map.
-
 ### `CurriculumVitae.yaml`
 
 My CV. Based on https://jsonresume.org/ with some sensible changes, and yaml.
@@ -62,4 +56,3 @@ Jinja template for making a index page for gh-pages. Not related to `cvibes`
 ### `make_index.py`
 
 Makes index from `index.html.jinja`. Not related to `cvibes`
-
