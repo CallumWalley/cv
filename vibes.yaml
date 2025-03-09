@@ -128,9 +128,10 @@
     show_portrait: False
   overwrite:
     basics:
-      label: Tech Support
+      label: Research Support
   mask:
     basics: true
+    awards: true
     profiles: 
       - github
       - linkedin
@@ -147,6 +148,7 @@
       - hpc
       - data-science
       - rse
+      - cad
     languages:
       - cs
       - python

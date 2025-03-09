@@ -44,14 +44,17 @@ work:
   - HPC Support Devops 
   - Cloud Services
 - name: Tycho
+  name_long: Tycho Engineering & Design
   position: Sole Employee
   url: https://company.com
   start_date: '2018'
   end_date: Current
   highlights:
+  - My company for contract work.
   - Engineering CAD
   - Digital Design
 - name: AUT
+  name_long: Auckland University of Technology
   position: Research Assistant
   url: ''
   start_date: '2016'
@@ -83,7 +86,7 @@ volunteer:
   end_date: '2021'
   description: ''
   highlights:
-  - Volunteer Representative for EMS at Royal Reception.
+  - Volunteer Rep for EMS at Royal Reception.
 education:
 - slug: macleans
   name: Macleans Collage
@@ -94,8 +97,8 @@ education:
   - Distiction in Computer Science
   - IGCSE A Levels
 - slug: aut
-  name: AUT University
-  name_long: Auckland University of Technology University
+  name: AUT
+  name_long: Auckland University of Technology
   url: ''
   position: Mechanical Engineering (Hons)
   start_date: '2013'
@@ -163,33 +166,31 @@ qualifications:
   url: 
 skills:
 - name: Training
-  description: I am experienced with material development, as well as organisation and delivery of workshops,
-    webinars, etc.
+  description: Experienced with material development, as well as organisation and delivery of workshops, webinars and talks.
   highlights:
   - Software Carpentry Instructor
-  - Quarterly 'Introduction to HPC'
+  - Running Quarterly 'Introduction to HPC' for 4+ years.
   - Workshops at Resbaz, eRNZ, NZRSE, ASP
 - slug: docs
   name: Information Architecture
-  description: I enjoy organising information in a way that is
+  description: Take pride in organising information in a way that is
     accessible, intuitive and maintainable.
   highlights:
-  - docs.nesi.org.nz
-  - Training material
+  - www.docs.nesi.org.nz
+  - Creating training material
 - slug: cad
-  name: Engineering CAD
-  description: 'I am a qualified Engineer with years of experience in CAD.'
+  name: Engineering Design
+  description: 'Qualified Engineer with years of experience in CAD and product design.'
   highlights:
   - Solidworks
   - CadQuery
-  - Product Design
 - slug: support
   name: Support
 - slug: rse
   name: Scientific Programming
-  description: 'I have worked closely with researchers to help them upskill and improve their code.'
+  description: 'Working closely with researchers to help them upskill and improve their code.'
   highlights:
-  - Reproducability
+  - Open Science
   - Workflow Design
   - Paralellisation
   - Optimisation
@@ -207,7 +208,7 @@ skills:
   - Visualisation
 - name: Cloud Computing
   slug: cloud
-  description: 'I am familiar with using all the major cloud service providers, and have a firm understanding of core concepts.'
+  description: 'Familiar with using all the major cloud service providers, and have a firm understanding of core concepts.'
   highlights:
   - OpenStack (Catalyst, Nectar, FlexiHPC)
   - AWS
@@ -217,11 +218,12 @@ skills:
   name: High Performance Computing
   description: 'I have supported and maintained a wide range of HPC services.'
   highlights:
-  - I love Bash 
+  - Linux Systems 
   - Lmod Software Stack
   - Job Scheduling (Slurm)
   - Containerisation (Singularity/Docker)
-  - Visualisation 
+  - Visualisation
+  - Bash Enthusiast 
 - slug: design
   name: Digital Design
   description: 'Is My Passion'
@@ -375,11 +377,11 @@ projects:
   slug: RStudio
   description: Integration for JupyterHub to allow use of RStudio Desktop on the NeSI HPC environment.
 - name: Introduction to HPC containers
-  description: Workshop delivered at serveral ERNZ and NZRSE conferences.
+  description: Workshop delivered at serveral eResearch NZ and NZ Research Software Engineers conferences.
   slug: containers
-- name: Accounting Automation
-  description: I have automated statement ingestion, classification, time tracking, invoicing etc.
+- name: Accounting Automatio
+  description: I have automated statement ingestion, classification, time tracking and invoicing using Open Soure, plain text tools.
 - name: 'NeSI Support Documentation'
   slug: docs
   url: https://docs.nesi.org.nz
-  description: Advocated for, then lead the move from use of a proprietory CMS system that did not fit our needs, to a OpenSource markdown based system served through GitHub.
+  description: Advocated for, then lead the move from use of a proprietory content management system that did not fit our needs, to a OpenSource markdown based system served through GitHub.
