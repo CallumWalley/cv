@@ -14,13 +14,17 @@
         function nextVibe() {
             current_url = (current_url + vibes.length + 1) % (vibes.length);
             document.getElementById("cv").src = vibes[current_url].url;
+            history.pushState(null, '', window.location.pathname + '?' + vibes[current_url].name);
         }
         function previousVibe() {
             current_url = (current_url + vibes.length - 1) % (vibes.length);
             document.getElementById("cv").src = vibes[current_url].url;
+            history.pushState(null, '', window.location.pathname + '?' + vibes[current_url].name);
         }
-        var current_url = 0
+        search = new URL(document.location).search;
+        var current_url = Math.max(0, vibes.findIndex(x => x.name == search))
         window.onload = () => { document.getElementById("cv").src = vibes[current_url].url }
+        history.pushState(null, '', window.location.pathname + '?' + vibes[current_url].name);
     </script>
 </head>
 <body format="background: #f3f3f3">
