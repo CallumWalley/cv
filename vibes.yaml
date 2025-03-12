@@ -127,7 +127,6 @@
   includes: includes
   outputs:
     - docs/anz.html
-  theme: "../theme_metro"
   theme_options:
     color_primary: rgb(232, 74, 7)
     show_portrait: False
