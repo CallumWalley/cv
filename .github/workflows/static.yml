@@ -28,29 +28,17 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: get wkhtml
-        run: |
-          # sudo apt-get install libssl1.1
-          # wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.focal_amd64.deb
-          # sudo apt install -y ./wkhtmltox_0.12.6-1.focal_amd64.deb
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install flake8 pytest
-          pip install -r cvibes/requirements.txt
+          pip install -r requirements.txt
       - name: Generate Pages
         run: python3 make_all.py
       - name: Generate Index
         run: python3 make_index.py
-      - name: Commit to main
-        run: |
-          git config user.name "${GITHUB_ACTOR}"
-          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-          git add --all
-          git commit --allow-empty -m "Outpus of make_all.py" 
-          git push -f origin main
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
